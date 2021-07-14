@@ -1,0 +1,4 @@
+[submodule "react-themes/demos/showcase"]
+	path = react-themes/demos/showcase
+	url = https://github.com/pxblue/react-showcase-demo
+	branch = dev

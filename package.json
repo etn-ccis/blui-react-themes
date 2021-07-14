@@ -17,12 +17,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/pxblue/themes.git"
+        "url": "git+https://github.com/pxblue/react-themes.git"
     },
     "bugs": {
-        "url": "https://github.com/pxblue/themes/issues"
+        "url": "https://github.com/pxblue/react-themes/issues"
     },
-    "homepage": "https://github.com/pxblue/themes/tree/master/react",
+    "homepage": "https://github.com/pxblue/react-themes/tree/master",
     "keywords": [
         "PXBlue",
         "themes",
