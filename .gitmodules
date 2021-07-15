@@ -1,4 +1,4 @@
-[submodule "react/demos/showcase"]
-	path = react/demos/showcase
+[submodule "demos/showcase"]
+	path = demos/showcase
 	url = https://github.com/pxblue/react-showcase-demo
 	branch = dev
