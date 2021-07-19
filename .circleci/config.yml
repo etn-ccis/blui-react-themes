@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+    gh: circleci/github-cli@1.0.3
 jobs:
     build:
         docker:
@@ -33,6 +35,20 @@ jobs:
                     name: Publish @pxblue/react-themes
                     command:  |
                         yarn publish:package -b $CIRCLE_BRANCH
+
+    tag:
+        docker:
+            -   image: circleci/node:12.9.1-browsers
+        steps:
+            -   checkout
+            -   gh/setup
+            -   attach_workspace:
+                    at: .
+            -   run:
+                    name: Tag @pxblue/react-themes
+                    command:  |
+                        yarn tag:package -b $CIRCLE_BRANCH
+
 workflows:
     version: 2
     themes:
@@ -46,3 +62,10 @@ workflows:
                           only:
                               - master
                               - dev
+            - tag:
+                  requires:
+                      - publish
+                  filters:
+                      branches:
+                          only:
+                              - master
