@@ -1,4 +1,6 @@
 # PX Blue themes for React applications
+[![](https://img.shields.io/circleci/project/github/pxblue/react-themes/master.svg?style=flat)](https://circleci.com/gh/pxblue/react-themes/tree/master)
+![npm](https://img.shields.io/npm/v/@pxblue/react-themes?label=%40pxblue%2Freact-themes)
 
 This package provides theming support for Eaton applications using the PX Blue design system. It includes resources for developers using React w/ [Material UI](https://www.npmjs.com/package/@material-ui/core) version 4+ (prior versions of this package will work with Material UI version 3 - check the [Changelog](https://github.com/pxblue/themes/blob/master/CHANGELOG.md) for details). This package comes with two theme options: a Blue theme (standard) and a Dark theme.
 
