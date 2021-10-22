@@ -1,26 +1,26 @@
 # PX Blue themes for React applications
-[![](https://img.shields.io/circleci/project/github/pxblue/react-themes/master.svg?style=flat)](https://circleci.com/gh/pxblue/react-themes/tree/master)
-[![](https://img.shields.io/npm/v/@pxblue/react-themes.svg?label=@pxblue/react-themes&style=flat)](https://www.npmjs.com/package/@pxblue/react-themes)
+[![](https://img.shields.io/circleci/project/github/brightlayer-ui/react-themes/master.svg?style=flat)](https://circleci.com/gh/brightlayer-ui/react-themes/tree/master)
+[![](https://img.shields.io/npm/v/@brightlayer-ui/react-themes.svg?label=@brightlayer-ui/react-themes&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/react-themes)
 
-This package provides theming support for Eaton applications using the PX Blue design system. It includes resources for developers using React w/ [Material UI](https://www.npmjs.com/package/@material-ui/core) version 4+ (prior versions of this package will work with Material UI version 3 - check the [Changelog](https://github.com/pxblue/themes/blob/master/CHANGELOG.md) for details). This package comes with two theme options: a Blue theme (standard) and a Dark theme.
+This package provides theming support for Eaton applications using the PX Blue design system. It includes resources for developers using React w/ [Material UI](https://www.npmjs.com/package/@material-ui/core) version 4+ (prior versions of this package will work with Material UI version 3 - check the [Changelog](https://github.com/brightlayer-ui/themes/blob/master/CHANGELOG.md) for details). This package comes with two theme options: a Blue theme (standard) and a Dark theme.
 
 For other frameworks, check out our related packages:
 
--   [@pxblue/angular-themes](https://www.npmjs.com/package/@pxblue/angular-themes)
--   [@pxblue/react-native-themes](https://www.npmjs.com/package/@pxblue/react-native-themes)
+-   [@brightlayer-ui/angular-themes](https://www.npmjs.com/package/@brightlayer-ui/angular-themes)
+-   [@brightlayer-ui/react-native-themes](https://www.npmjs.com/package/@brightlayer-ui/react-native-themes)
 
 ## Installation
 
 Install with npm
 
 ```shell
-npm install --save @pxblue/react-themes
+npm install --save @brightlayer-ui/react-themes
 ```
 
 or yarn
 
 ```shell
-yarn add @pxblue/react-themes
+yarn add @brightlayer-ui/react-themes
 ```
 
 # Usage
@@ -32,8 +32,8 @@ import {
     ThemeProvider,
     createMuiTheme
 } from '@material-ui/core/styles';
-import * as PXBlueThemes from '@pxblue/react-themes';
-import "@pxblue/react-themes/open-sans";
+import * as PXBlueThemes from '@brightlayer-ui/react-themes';
+import "@brightlayer-ui/react-themes/open-sans";
 ...
 <ThemeProvider theme={createMuiTheme(PXBlueThemes.blue)}>
     <App />
@@ -53,9 +53,9 @@ require('typeface-open-sans');
 After:
 
 ```js
-import '@pxblue/react-themes/open-sans';
+import '@brightlayer-ui/react-themes/open-sans';
 ```
 
 ## Demo
 
-[View on Code Sandbox](https://codesandbox.io/s/github/pxblue/themes/tree/master/react/demos/theme/)
+[View on Code Sandbox](https://codesandbox.io/s/github/brightlayer-ui/themes/tree/master/react/demos/theme/)

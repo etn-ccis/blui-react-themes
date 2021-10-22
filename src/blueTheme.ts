@@ -8,7 +8,7 @@
 
 import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
 import { typography, createSimpleLightPalette as createSimplePalette } from './shared';
-import * as PXBColors from '@pxblue/colors';
+import * as PXBColors from '@brightlayer-ui/colors';
 import Color from 'color';
 
 /* 

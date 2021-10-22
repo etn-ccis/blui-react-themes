@@ -9,7 +9,7 @@
 import { typography, createSimpleDarkPalette as createSimplePalette } from './shared';
 import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
 import Color from 'color';
-import * as PXBColors from '@pxblue/colors';
+import * as PXBColors from '@brightlayer-ui/colors';
 
 /* 
     Variable color definitions so we can reuse them in the theme overrides below
