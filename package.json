@@ -14,8 +14,8 @@
         "build": "yarn && bash ./scripts/build.sh",
         "link:themes": "bash ./scripts/linkThemes.sh",
         "test": "bash ./scripts/buildTest.sh",
-        "publish:package": "cd dist && set npm_config_yes=true && npx -p @brightlayer-ui/publish pxb-publish",
-        "tag:package": "npx -p @brightlayer-ui/tag pxb-tag",
+        "publish:package": "cd dist && set npm_config_yes=true && npx -p @brightlayer-ui/publish blui-publish",
+        "tag:package": "npx -p @brightlayer-ui/tag blui-tag",
         "update:submodule": "git submodule update --remote"
     },
     "repository": {

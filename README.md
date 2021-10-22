@@ -32,10 +32,10 @@ import {
     ThemeProvider,
     createMuiTheme
 } from '@material-ui/core/styles';
-import * as PXBlueThemes from '@brightlayer-ui/react-themes';
+import * as BLUIThemes from '@brightlayer-ui/react-themes';
 import "@brightlayer-ui/react-themes/open-sans";
 ...
-<ThemeProvider theme={createMuiTheme(PXBlueThemes.blue)}>
+<ThemeProvider theme={createMuiTheme(BLUIThemes.blue)}>
     <App />
 </ThemeProvider>
 ```

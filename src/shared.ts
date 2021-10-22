@@ -6,7 +6,7 @@ All rights reserved.
 This code is licensed under the BSD-3 license found in the LICENSE file in the root directory of this source tree and at https://opensource.org/licenses/BSD-3-Clause.
 **/
 
-import { PXBlueColor } from '@brightlayer-ui/types';
+import { BLUIColor } from '@brightlayer-ui/types';
 import { SimplePaletteColorOptions } from '@material-ui/core';
 
 export const typography = {
@@ -41,13 +41,13 @@ export const typography = {
         lineHeight: '1.67',
     },
 };
-export const createSimpleLightPalette = (color: PXBlueColor): SimplePaletteColorOptions => ({
+export const createSimpleLightPalette = (color: BLUIColor): SimplePaletteColorOptions => ({
     light: color[50],
     main: color[500],
     dark: color[700],
 });
 
-export const createSimpleDarkPalette = (color: PXBlueColor): SimplePaletteColorOptions => ({
+export const createSimpleDarkPalette = (color: BLUIColor): SimplePaletteColorOptions => ({
     light: color[50],
     main: color[200],
     dark: color[500],
