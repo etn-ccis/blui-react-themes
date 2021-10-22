@@ -1,9 +1,9 @@
 {
     "name": "@brightlayer-ui/react-themes",
-    "author": "PX Blue <pxblue@eaton.com>",
+    "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
     "version": "6.1.0",
-    "description": "React themes for PX Blue applications",
+    "description": "React themes for Brightlayer UI applications",
     "main": "index.js",
     "scripts": {
         "initialize": "bash scripts/initializeSubmodule.sh",
@@ -27,7 +27,7 @@
     },
     "homepage": "https://github.com/brightlayer-ui/react-themes/tree/master",
     "keywords": [
-        "PXBlue",
+        "Brightlayer UI",
         "themes",
         "Eaton",
         "Power",
