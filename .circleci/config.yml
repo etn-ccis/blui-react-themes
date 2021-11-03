@@ -32,7 +32,7 @@ jobs:
                         echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
                         echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
             -   run:
-                    name: Publish @pxblue/react-themes
+                    name: Publish @brightlayer-ui/react-themes
                     command:  |
                         yarn publish:package -b $CIRCLE_BRANCH
 
@@ -45,7 +45,7 @@ jobs:
             -   attach_workspace:
                     at: .
             -   run:
-                    name: Tag @pxblue/react-themes
+                    name: Tag @brightlayer-ui/react-themes
                     command:  |
                         yarn tag:package -b $CIRCLE_BRANCH
 

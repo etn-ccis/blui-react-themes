@@ -1,9 +1,9 @@
 {
-    "name": "@pxblue/react-themes",
-    "author": "PX Blue <pxblue@eaton.com>",
+    "name": "@brightlayer-ui/react-themes",
+    "author": "Brightlayer UI <brightlayer-ui@eaton.com>",
     "license": "BSD-3-Clause",
-    "version": "6.1.0",
-    "description": "React themes for PX Blue applications",
+    "version": "6.1.0-beta.0",
+    "description": "React themes for Brightlayer UI applications",
     "main": "index.js",
     "scripts": {
         "initialize": "bash scripts/initializeSubmodule.sh",
@@ -14,20 +14,20 @@
         "build": "yarn && bash ./scripts/build.sh",
         "link:themes": "bash ./scripts/linkThemes.sh",
         "test": "bash ./scripts/buildTest.sh",
-        "publish:package": "cd dist && set npm_config_yes=true && npx -p @pxblue/publish pxb-publish",
-        "tag:package": "npx -p @pxblue/tag pxb-tag",
+        "publish:package": "cd dist && set npm_config_yes=true && npx -p @brightlayer-ui/publish blui-publish",
+        "tag:package": "npx -p @brightlayer-ui/tag blui-tag -s -blui-react-themes",
         "update:submodule": "git submodule update --remote"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/pxblue/react-themes.git"
+        "url": "git+https://github.com/brightlayer-ui/react-themes.git"
     },
     "bugs": {
-        "url": "https://github.com/pxblue/react-themes/issues"
+        "url": "https://github.com/brightlayer-ui/react-themes/issues"
     },
-    "homepage": "https://github.com/pxblue/react-themes/tree/master",
+    "homepage": "https://github.com/brightlayer-ui/react-themes/tree/master",
     "keywords": [
-        "PXBlue",
+        "Brightlayer UI",
         "themes",
         "Eaton",
         "Power",
@@ -36,7 +36,7 @@
     ],
     "dependencies": {
         "@fontsource/open-sans": "^4.2.2",
-        "@pxblue/colors": "^3.0.0",
+        "@brightlayer-ui/colors": "^3.0.0",
         "color": "^3.1.3"
     },
     "peerDependencies": {
