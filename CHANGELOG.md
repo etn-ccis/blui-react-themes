@@ -1,6 +1,6 @@
 # Changelog
 
-## v6.1.0 (Not yet published)
+## v6.1.0 (November 4, 2021)
 
 ### Changed
 
