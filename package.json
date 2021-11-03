@@ -15,7 +15,7 @@
         "link:themes": "bash ./scripts/linkThemes.sh",
         "test": "bash ./scripts/buildTest.sh",
         "publish:package": "cd dist && set npm_config_yes=true && npx -p @brightlayer-ui/publish blui-publish",
-        "tag:package": "npx -p @brightlayer-ui/tag blui-tag",
+        "tag:package": "npx -p @brightlayer-ui/tag blui-tag -s -blui-react-themes",
         "update:submodule": "git submodule update --remote"
     },
     "repository": {
