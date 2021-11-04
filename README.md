@@ -58,4 +58,4 @@ import '@brightlayer-ui/react-themes/open-sans';
 
 ## Demo
 
-[View on Code Sandbox](https://codesandbox.io/s/github/brightlayer-ui/themes/tree/master/react/demos/theme/)
+[View on Code Sandbox](https://codesandbox.io/s/github/brightlayer-ui/react-showcase-demo)
