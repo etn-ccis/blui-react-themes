@@ -12,18 +12,11 @@ NC='\033[0m' # No Color
 echo -e "${BLUE}Building components...${NC}"
 yarn build
 
-
 echo -en "${BLUE}Creating new folder in node_modules...${NC}"
-rm -rf "./demos/theme/node_modules/@brightlayer-ui/react-themes"
-mkdir -p "./demos/theme/node_modules/@brightlayer-ui/react-themes"
-
 rm -rf "./demos/showcase/node_modules/@brightlayer-ui/react-themes"
 mkdir -p "./demos/showcase/node_modules/@brightlayer-ui/react-themes"
 
 echo -e "${GREEN}Done${NC}"
-
-echo -en "${BLUE}Copying build output into node_modules...${NC}";
-cp -r ./dist/* ./demos/theme/node_modules/@brightlayer-ui/react-themes/
 
 echo -en "${BLUE}Copying build output into node_modules...${NC}";
 cp -r ./dist/* ./demos/showcase/node_modules/@brightlayer-ui/react-themes/
@@ -31,6 +24,5 @@ cp -r ./dist/* ./demos/showcase/node_modules/@brightlayer-ui/react-themes/
 echo -e "${GREEN}Done${NC}"
 
 echo -en "\r\n${BBLUE}Linking Components: ${NC}"
-if [ ! -f ./demos/theme/node_modules/@brightlayer-ui/react-themes/package.json ]; then echo -e "${BRED}Not Linked${NC}" && exit 1; fi
 if [ ! -f ./demos/showcase/node_modules/@brightlayer-ui/react-themes/package.json ]; then echo -e "${BRED}Not Linked${NC}" && exit 1; fi
 echo -e "${GRAY}Complete${NC}\r\n"
