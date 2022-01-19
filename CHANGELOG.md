@@ -1,5 +1,11 @@
 # Changelog
 
+## v6.1.1 (Unreleased)
+
+### Changed
+
+-   Updated MUI `<Tooltip>` font size to .75rem ([#8](https://github.com/brightlayer-ui/react-themes/issues/8)).
+
 ## v6.1.0 (November 8, 2021)
 
 ### Changed
