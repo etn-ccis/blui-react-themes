@@ -4,7 +4,7 @@
 
 ### Fixed
 
--   Fix light theme to use black 500 for divider.
+-   Fix light theme to use black 500 for divider. ([#17](https://github.com/brightlayer-ui/react-themes/issues/17)).
 
 ### Changed
 
