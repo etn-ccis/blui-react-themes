@@ -659,7 +659,7 @@ export const blueTheme: ThemeOptions = {
                 },
             },
             icon: {
-                opacity: 0.12,
+                opacity: 1,
             },
         },
 
