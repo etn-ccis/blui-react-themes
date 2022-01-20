@@ -23,7 +23,7 @@ const ThemeColors = {
     error: createSimplePalette(BLUIColors.red),
     success: createSimplePalette(BLUIColors.green),
     info: createSimplePalette(BLUIColors.lightBlue),
-    divider: Color(BLUIColors.red[500]).alpha(0.36).string(),
+    divider: Color(BLUIColors.black[500]).alpha(0.12).string(),
     warning: {
         light: BLUIColors.yellow[100],
         main: BLUIColors.yellow[500],
@@ -64,6 +64,7 @@ export const blueTheme: ThemeOptions = {
         error: ThemeColors.error,
         success: ThemeColors.success,
         info: ThemeColors.info,
+        divider: ThemeColors.divider,
         warning: ThemeColors.warning,
         background: ThemeColors.background,
         text: ThemeColors.text,
