@@ -2,6 +2,10 @@
 
 ## v6.1.1 (Unreleased)
 
+### Fixed
+
+-   Fix light theme to use black 500 for divider. ([#17](https://github.com/brightlayer-ui/react-themes/issues/17)).
+
 ### Changed
 
 -   Updated MUI `<Tooltip>` font size to .75rem ([#8](https://github.com/brightlayer-ui/react-themes/issues/8)).
