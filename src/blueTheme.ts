@@ -6,10 +6,13 @@
  This code is licensed under the BSD-3 license found in the LICENSE file in the root directory of this source tree and at https://opensource.org/licenses/BSD-3-Clause.
  **/
 
-import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
-import { typography, createSimpleLightPalette as createSimplePalette } from './shared';
-import * as BLUIColors from '@brightlayer-ui/colors';
-import Color from 'color';
+import { ThemeOptions } from "@material-ui/core/styles/createMuiTheme";
+import {
+    typography,
+    createSimpleLightPalette as createSimplePalette,
+} from "./shared";
+import * as BLUIColors from "@brightlayer-ui/colors";
+import Color from "color";
 
 /* 
     Variable color definitions so we can reuse them in the theme overrides below
@@ -52,10 +55,10 @@ const Spacing = 8;
     to customize in our themes. These have changed periodically from version to version of Material UI.
 */
 export const blueTheme: ThemeOptions = {
-    direction: 'ltr',
+    direction: "ltr",
     typography: typography,
     palette: {
-        type: 'light',
+        type: "light",
         primary: ThemeColors.primary,
         secondary: ThemeColors.secondary,
         error: ThemeColors.error,
@@ -76,10 +79,10 @@ export const blueTheme: ThemeOptions = {
             colorSecondary: {
                 color: ThemeColors.background.paper,
                 backgroundColor: ThemeColors.primary.dark,
-                '& .MuiInputBase-root': {
+                "& .MuiInputBase-root": {
                     color: ThemeColors.background.paper,
                 },
-                '& .MuiSelect-icon': {
+                "& .MuiSelect-icon": {
                     color: ThemeColors.background.paper,
                 },
             },
@@ -101,10 +104,10 @@ export const blueTheme: ThemeOptions = {
         MuiBottomNavigationAction: {
             root: {
                 color: BLUIColors.blue[200],
-                '&$selected': {
+                "&$selected": {
                     color: WhiteText,
-                    '& $label': {
-                        fontSize: '0.75rem',
+                    "& $label": {
+                        fontSize: "0.75rem",
                         fontWeight: 600,
                     },
                 },
@@ -116,34 +119,39 @@ export const blueTheme: ThemeOptions = {
         // BUTTON OVERRIDES
         MuiButton: {
             root: {
-                textTransform: 'none',
+                textTransform: "none",
             },
             contained: {
                 backgroundColor: ThemeColors.background.paper,
                 color: ThemeColors.text.primary,
-                '&$disableElevation:not($containedPrimary):not($containedSecondary)': {
-                    backgroundColor: BLUIColors.white[500],
-                    '&:hover': {
-                        backgroundColor: BLUIColors.white[300],
+                "&$disableElevation:not($containedPrimary):not($containedSecondary)":
+                    {
+                        backgroundColor: BLUIColors.white[500],
+                        "&:hover": {
+                            backgroundColor: BLUIColors.white[300],
+                        },
+                        "&$disabled": {
+                            borderWidth: 0,
+                        },
                     },
-                    '&$disabled': {
-                        borderWidth: 0,
-                    },
+                "&:hover": {
+                    backgroundColor: Color(BLUIColors.black[500])
+                        .alpha(0.05)
+                        .string(),
                 },
-                '&:hover': {
-                    backgroundColor: Color(BLUIColors.black[500]).alpha(0.05).string(),
-                },
-                '&$disabled': {
+                "&$disabled": {
                     backgroundColor: ThemeColors.background.paper,
-                    border: `1px solid ${Color(BLUIColors.black[500]).alpha(0.12).string()}`,
+                    border: `1px solid ${Color(BLUIColors.black[500])
+                        .alpha(0.12)
+                        .string()}`,
                     color: Color(ThemeColors.text.primary).alpha(0.3).string(),
                 },
             },
             containedPrimary: {
-                '&:hover': {
+                "&:hover": {
                     backgroundColor: BLUIColors.blue[300],
                 },
-                '&$disabled': {
+                "&$disabled": {
                     backgroundColor: ThemeColors.primary.light,
                     borderWidth: 0,
                     color: BLUIColors.blue[200],
@@ -151,10 +159,10 @@ export const blueTheme: ThemeOptions = {
                 },
             },
             containedSecondary: {
-                '&:hover': {
+                "&:hover": {
                     backgroundColor: BLUIColors.lightBlue[300],
                 },
-                '&$disabled': {
+                "&$disabled": {
                     backgroundColor: ThemeColors.secondary.light,
                     borderWidth: 0,
                     color: BLUIColors.lightBlue[200],
@@ -163,10 +171,12 @@ export const blueTheme: ThemeOptions = {
             },
             outlined: {
                 borderColor: ThemeColors.divider,
-                '&:hover': {
-                    backgroundColor: Color(BLUIColors.black[500]).alpha(0.05).string(),
+                "&:hover": {
+                    backgroundColor: Color(BLUIColors.black[500])
+                        .alpha(0.05)
+                        .string(),
                 },
-                '&$disabled': {
+                "&$disabled": {
                     backgroundColor: ThemeColors.background.paper,
                     borderColor: Color(BlackBorder).alpha(0.12).string(),
                     color: Color(ThemeColors.text.primary).alpha(0.3).string(),
@@ -174,38 +184,48 @@ export const blueTheme: ThemeOptions = {
             },
             outlinedPrimary: {
                 borderColor: ThemeColors.primary.main,
-                '&$disabled': {
+                "&$disabled": {
                     borderColor: Color(BlackBorder).alpha(0.12).string(),
                 },
-                '&:hover': {
-                    backgroundColor: Color(ThemeColors.primary.main).alpha(0.05).string(),
+                "&:hover": {
+                    backgroundColor: Color(ThemeColors.primary.main)
+                        .alpha(0.05)
+                        .string(),
                 },
             },
             outlinedSecondary: {
                 borderColor: ThemeColors.secondary.main,
-                '&$disabled': {
+                "&$disabled": {
                     borderColor: Color(BlackBorder).alpha(0.12).string(),
                 },
-                '&:hover': {
-                    backgroundColor: Color(ThemeColors.secondary.main).alpha(0.05).string(),
+                "&:hover": {
+                    backgroundColor: Color(ThemeColors.secondary.main)
+                        .alpha(0.05)
+                        .string(),
                 },
             },
             text: {
-                '&$disabled': {
+                "&$disabled": {
                     color: ThemeColors.action.disabled,
                 },
-                '&:hover': {
-                    backgroundColor: Color(BLUIColors.black[500]).alpha(0.05).string(),
+                "&:hover": {
+                    backgroundColor: Color(BLUIColors.black[500])
+                        .alpha(0.05)
+                        .string(),
                 },
             },
             textPrimary: {
-                '&:hover': {
-                    backgroundColor: Color(ThemeColors.primary.main).alpha(0.05).string(),
+                "&:hover": {
+                    backgroundColor: Color(ThemeColors.primary.main)
+                        .alpha(0.05)
+                        .string(),
                 },
             },
             textSecondary: {
-                '&:hover': {
-                    backgroundColor: Color(ThemeColors.secondary.main).alpha(0.05).string(),
+                "&:hover": {
+                    backgroundColor: Color(ThemeColors.secondary.main)
+                        .alpha(0.05)
+                        .string(),
                 },
             },
             disabled: {},
@@ -215,17 +235,17 @@ export const blueTheme: ThemeOptions = {
         // BUTTON GROUP OVERRIDES
         MuiButtonGroup: {
             groupedText: {
-                '&:not(:last-child)$disabled': {
+                "&:not(:last-child)$disabled": {
                     borderColor: ThemeColors.divider,
                 },
             },
             groupedTextPrimary: {
-                '&:not(:last-child)$disabled': {
+                "&:not(:last-child)$disabled": {
                     borderColor: ThemeColors.divider,
                 },
             },
             groupedTextSecondary: {
-                '&:not(:last-child)$disabled': {
+                "&:not(:last-child)$disabled": {
                     borderColor: ThemeColors.divider,
                 },
             },
@@ -242,134 +262,138 @@ export const blueTheme: ThemeOptions = {
         // CHIP OVERRIDES
         MuiChip: {
             root: {
-                fontSize: '0.875rem',
+                fontSize: "0.875rem",
                 backgroundColor: BLUIColors.white[500],
                 color: ThemeColors.text.primary,
-                '& $avatar': {
+                "& $avatar": {
                     backgroundColor: ThemeColors.primary.main,
                     color: WhiteText,
                     // marginLeft: Spacing,
                     marginRight: -4,
                 },
-                '& $avatarColorPrimary': {
+                "& $avatarColorPrimary": {
                     backgroundColor: ThemeColors.primary.light,
                     color: ThemeColors.primary.main,
                 },
-                '& $avatarColorSecondary': {
+                "& $avatarColorSecondary": {
                     backgroundColor: ThemeColors.primary.light,
                     color: ThemeColors.primary.main,
                 },
-                '&$disabled': {
+                "&$disabled": {
                     opacity: 1,
                     color: Color(ThemeColors.text.primary).alpha(0.3).string(),
-                    '& $avatar': {
+                    "& $avatar": {
                         opacity: 0.5,
                     },
-                    '&:not($colorPrimary):not($colorSecondary) $deleteIcon': {
+                    "&:not($colorPrimary):not($colorSecondary) $deleteIcon": {
                         color: ThemeColors.action.disabled,
                     },
-                    '&:not($colorPrimary):not($colorSecondary) $icon': {
+                    "&:not($colorPrimary):not($colorSecondary) $icon": {
                         color: ThemeColors.action.disabled,
                     },
                 },
             },
             clickable: {
-                '&:hover': {
+                "&:hover": {
                     backgroundColor: BLUIColors.gray[100],
                 },
             },
             clickableColorPrimary: {
-                '&:hover': {
+                "&:hover": {
                     backgroundColor: BLUIColors.blue[300],
                 },
             },
             clickableColorSecondary: {
-                '&:hover': {
+                "&:hover": {
                     backgroundColor: BLUIColors.lightBlue[300],
                 },
             },
             colorPrimary: {
-                '&:not($outlinedPrimary)$disabled': {
+                "&:not($outlinedPrimary)$disabled": {
                     backgroundColor: ThemeColors.primary.light,
                     color: BLUIColors.blue[200],
                     opacity: 1,
                 },
             },
             colorSecondary: {
-                '&:not($outlinedSecondary)$disabled': {
+                "&:not($outlinedSecondary)$disabled": {
                     backgroundColor: ThemeColors.secondary.light,
                     color: BLUIColors.lightBlue[200],
                     opacity: 1,
                 },
             },
             deleteIcon: {
-                fontSize: '1.125rem',
-                height: '1.125rem',
-                width: '1.125rem',
+                fontSize: "1.125rem",
+                height: "1.125rem",
+                width: "1.125rem",
                 margin: `0px ${Spacing}px 0px -4px`,
                 color: ThemeColors.action.active,
-                '&:hover': {
+                "&:hover": {
                     color: ThemeColors.text.primary,
                 },
             },
             deleteIconColorPrimary: {
                 color: BLUIColors.blue[100],
-                '&:hover': {
+                "&:hover": {
                     color: WhiteText,
                 },
             },
             deleteIconColorSecondary: {
                 color: BLUIColors.lightBlue[100],
-                '&:hover': {
+                "&:hover": {
                     color: WhiteText,
                 },
             },
             deleteIconOutlinedColorPrimary: {
                 color: BLUIColors.blue[200],
-                '&:hover': {
+                "&:hover": {
                     color: ThemeColors.primary.main,
                 },
             },
             deleteIconOutlinedColorSecondary: {
                 color: BLUIColors.lightBlue[200],
-                '&:hover': {
+                "&:hover": {
                     color: ThemeColors.secondary.main,
                 },
             },
             outlined: {
                 borderColor: Color(BlackBorder).alpha(0.12).string(),
-                '&$clickable:hover': {
+                "&$clickable:hover": {
                     backgroundColor: BLUIColors.white[200],
                 },
-                '& $avatar': {
+                "& $avatar": {
                     backgroundColor: BLUIColors.gray[500],
                     marginRight: -4,
                 },
-                '& $avatarColorPrimary': {
+                "& $avatarColorPrimary": {
                     backgroundColor: BLUIColors.blue[100],
                     color: ThemeColors.primary.main,
                 },
-                '& $avatarColorSecondary': {
+                "& $avatarColorSecondary": {
                     backgroundColor: BLUIColors.blue[100],
                     color: ThemeColors.primary.main,
                 },
-                '& $icon': {
+                "& $icon": {
                     marginLeft: Spacing,
                     marginRight: -4,
                 },
-                '& $deleteIcon': {
+                "& $deleteIcon": {
                     margin: `0px ${Spacing}px 0px -4px`,
                 },
-                '&$disabled $deleteIcon': {
-                    color: 'inherit',
+                "&$disabled $deleteIcon": {
+                    color: "inherit",
                 },
             },
             outlinedPrimary: {
-                backgroundColor: Color(ThemeColors.primary.main).alpha(0.05).string(),
-                '&$clickable:hover': {
-                    backgroundColor: Color(ThemeColors.primary.main).alpha(0.1).string(),
+                backgroundColor: Color(ThemeColors.primary.main)
+                    .alpha(0.05)
+                    .string(),
+                "&$clickable:hover": {
+                    backgroundColor: Color(ThemeColors.primary.main)
+                        .alpha(0.1)
+                        .string(),
                 },
-                '&$disabled': {
+                "&$disabled": {
                     opacity: 1,
                     backgroundColor: ThemeColors.background.paper,
                     color: ThemeColors.action.disabled,
@@ -377,11 +401,15 @@ export const blueTheme: ThemeOptions = {
                 },
             },
             outlinedSecondary: {
-                backgroundColor: Color(ThemeColors.secondary.main).alpha(0.05).string(),
-                '&$clickable:hover': {
-                    backgroundColor: Color(ThemeColors.secondary.main).alpha(0.1).string(),
+                backgroundColor: Color(ThemeColors.secondary.main)
+                    .alpha(0.05)
+                    .string(),
+                "&$clickable:hover": {
+                    backgroundColor: Color(ThemeColors.secondary.main)
+                        .alpha(0.1)
+                        .string(),
                 },
-                '&$disabled': {
+                "&$disabled": {
                     opacity: 1,
                     backgroundColor: ThemeColors.background.paper,
                     color: ThemeColors.action.disabled,
@@ -389,7 +417,7 @@ export const blueTheme: ThemeOptions = {
                 },
             },
             icon: {
-                fontSize: '1.125rem',
+                fontSize: "1.125rem",
                 color: ThemeColors.text.primary,
                 marginLeft: Spacing,
                 marginRight: -4,
@@ -404,25 +432,29 @@ export const blueTheme: ThemeOptions = {
         // FAB OVERRIDES
         MuiFab: {
             root: {
-                textTransform: 'none',
+                textTransform: "none",
                 backgroundColor: ThemeColors.background.paper,
                 color: ThemeColors.text.primary,
-                '&:hover': {
-                    backgroundColor: Color(BLUIColors.black[500]).alpha(0.05).string(),
+                "&:hover": {
+                    backgroundColor: Color(BLUIColors.black[500])
+                        .alpha(0.05)
+                        .string(),
                 },
-                '&$disabled': {
+                "&$disabled": {
                     backgroundColor: ThemeColors.background.paper,
-                    border: `1px solid ${Color(BlackBorder).alpha(0.12).string()}`,
+                    border: `1px solid ${Color(BlackBorder)
+                        .alpha(0.12)
+                        .string()}`,
                     color: ThemeColors.action.disabled,
                 },
             },
             primary: {
-                '&:hover': {
+                "&:hover": {
                     backgroundColor: BLUIColors.blue[300],
                 },
             },
             secondary: {
-                '&:hover': {
+                "&:hover": {
                     backgroundColor: BLUIColors.lightBlue[300],
                 },
             },
@@ -498,10 +530,10 @@ export const blueTheme: ThemeOptions = {
             root: {
                 backgroundColor: BLUIColors.black[900],
                 color: BLUIColors.black[50],
-                '& .MuiButton-textPrimary': {
+                "& .MuiButton-textPrimary": {
                     color: BLUIColors.blue[200],
                 },
-                '& .MuiButton-textSecondary': {
+                "& .MuiButton-textSecondary": {
                     color: BLUIColors.lightBlue[200],
                 },
             },
@@ -517,16 +549,16 @@ export const blueTheme: ThemeOptions = {
         MuiStep: {
             completed: {
                 // Place a white background behind the icons so that the checks will not be see-through
-                '& .MuiStepLabel-iconContainer:before': {
+                "& .MuiStepLabel-iconContainer:before": {
                     content: '""',
-                    position: 'absolute',
-                    display: 'block',
-                    top: '5%',
-                    right: '5%',
-                    bottom: '5%',
-                    left: '5%',
+                    position: "absolute",
+                    display: "block",
+                    top: "5%",
+                    right: "5%",
+                    bottom: "5%",
+                    left: "5%",
                     backgroundColor: ThemeColors.background.paper,
-                    borderRadius: '50%',
+                    borderRadius: "50%",
                 },
             },
         },
@@ -539,7 +571,7 @@ export const blueTheme: ThemeOptions = {
                 fill: ThemeColors.text.primary,
             },
             active: {
-                '& $text': {
+                "& $text": {
                     fill: WhiteText,
                     fontWeight: 600,
                 },
@@ -548,16 +580,16 @@ export const blueTheme: ThemeOptions = {
         MuiStepLabel: {
             label: {
                 color: ThemeColors.text.primary,
-                '&$active': {
+                "&$active": {
                     fontWeight: 600,
                     color: ThemeColors.primary.main,
                 },
-                '&$completed': {
+                "&$completed": {
                     fontWeight: 600,
                 },
             },
             iconContainer: {
-                position: 'relative',
+                position: "relative",
             },
             active: {},
             completed: {},
@@ -567,32 +599,36 @@ export const blueTheme: ThemeOptions = {
         MuiSwitch: {
             switchBase: {
                 color: ThemeColors.background.paper,
-                '&$checked + $track': {
+                "&$checked + $track": {
                     opacity: 0.38,
                 },
-                '&$checked': {
+                "&$checked": {
                     color: ThemeColors.secondary.main,
-                    '&$disabled': {
-                        color: Color(ThemeColors.secondary.main).mix(Color(ThemeColors.background.paper), 0.5).string(),
+                    "&$disabled": {
+                        color: Color(ThemeColors.secondary.main)
+                            .mix(Color(ThemeColors.background.paper), 0.5)
+                            .string(),
                     },
-                    '&$disabled + $track': {
+                    "&$disabled + $track": {
                         backgroundColor: ThemeColors.secondary.main,
                     },
                 },
             },
             colorPrimary: {
-                '&$disabled': {
+                "&$disabled": {
                     color: ThemeColors.background.paper,
                 },
-                '&$disabled + $track': {
+                "&$disabled + $track": {
                     backgroundColor: BLUIColors.black[100],
                 },
-                '&$checked': {
+                "&$checked": {
                     color: ThemeColors.primary.main,
-                    '&$disabled': {
-                        color: Color(ThemeColors.primary.main).mix(Color(ThemeColors.background.paper), 0.5).string(),
+                    "&$disabled": {
+                        color: Color(ThemeColors.primary.main)
+                            .mix(Color(ThemeColors.background.paper), 0.5)
+                            .string(),
                     },
-                    '&$disabled + $track': {
+                    "&$disabled + $track": {
                         opacity: 0.38,
                         backgroundColor: Color(ThemeColors.primary.main)
                             .mix(Color(ThemeColors.background.paper), 0.5)
@@ -601,10 +637,10 @@ export const blueTheme: ThemeOptions = {
                 },
             },
             colorSecondary: {
-                '&$disabled': {
+                "&$disabled": {
                     color: ThemeColors.background.paper,
                 },
-                '&$disabled + $track': {
+                "&$disabled + $track": {
                     backgroundColor: BLUIColors.black[100],
                 },
             },
@@ -628,21 +664,27 @@ export const blueTheme: ThemeOptions = {
         MuiTableRow: {
             root: {
                 backgroundColor: BLUIColors.white[100],
-                '&$hover:hover': {
-                    backgroundColor: Color(BLUIColors.white[100]).mix(Color(BLUIColors.black[50]), 0.5).string(),
+                "&$hover:hover": {
+                    backgroundColor: Color(BLUIColors.white[100])
+                        .mix(Color(BLUIColors.black[50]), 0.5)
+                        .string(),
                 },
-                '&:nth-of-type(odd):not($selected)': {
+                "&:nth-of-type(odd):not($selected)": {
                     backgroundColor: ThemeColors.background.paper,
-                    '&$hover:hover': {
+                    "&$hover:hover": {
                         backgroundColor: Color(ThemeColors.background.paper)
                             .mix(Color(BLUIColors.black[50]), 0.5)
                             .string(),
                     },
                 },
-                '&$selected': {
-                    backgroundColor: Color(ThemeColors.primary.main).alpha(0.05).string(),
-                    '&$hover:hover': {
-                        backgroundColor: Color(ThemeColors.primary.main).alpha(0.07).string(),
+                "&$selected": {
+                    backgroundColor: Color(ThemeColors.primary.main)
+                        .alpha(0.05)
+                        .string(),
+                    "&$hover:hover": {
+                        backgroundColor: Color(ThemeColors.primary.main)
+                            .alpha(0.07)
+                            .string(),
                     },
                 },
             },
@@ -650,9 +692,9 @@ export const blueTheme: ThemeOptions = {
         },
         MuiTableSortLabel: {
             root: {
-                '&:hover': {
+                "&:hover": {
                     color: ThemeColors.text.primary,
-                    '& $icon': {
+                    "& $icon": {
                         color: BLUIColors.black[300],
                         opacity: 1,
                     },
@@ -667,19 +709,19 @@ export const blueTheme: ThemeOptions = {
         MuiTab: {
             root: {
                 fontWeight: 400,
-                '&$selected': {
+                "&$selected": {
                     fontWeight: 600,
                 },
             },
             labelIcon: {
-                '& $wrapper > *:first-child': {
+                "& $wrapper > *:first-child": {
                     marginBottom: 0,
                 },
             },
             textColorPrimary: {
                 color: WhiteText,
                 opacity: 0.7,
-                '&$selected': {
+                "&$selected": {
                     color: WhiteText,
                     opacity: 1,
                 },
@@ -687,7 +729,7 @@ export const blueTheme: ThemeOptions = {
             textColorSecondary: {
                 color: WhiteText,
                 opacity: 0.7,
-                '&$selected': {
+                "&$selected": {
                     color: WhiteText,
                     opacity: 1,
                 },
@@ -701,20 +743,27 @@ export const blueTheme: ThemeOptions = {
             },
         },
 
+        // TOOLTIP OVERRIDES
+        MuiTooltip: {
+            tooltip: {
+                fontSize: "0.75rem",
+            },
+        },
+
         // TEXT FIELD OVERRIDES
         MuiInputBase: {
             root: {
-                '&$disabled': {
+                "&$disabled": {
                     color: ThemeColors.action.disabled,
                 },
             },
             input: {
-                '&::placeholder': {
+                "&::placeholder": {
                     color: BLUIColors.black[100],
                     opacity: 1,
                 },
-                '&:-webkit-autofill': {
-                    '-webkit-box-shadow': `0 0 0 30px ${BLUIColors.white[50]} inset`,
+                "&:-webkit-autofill": {
+                    "-webkit-box-shadow": `0 0 0 30px ${BLUIColors.white[50]} inset`,
                 },
             },
             adornedStart: {},
@@ -723,21 +772,21 @@ export const blueTheme: ThemeOptions = {
         },
         MuiInput: {
             underline: {
-                '&:before': {
+                "&:before": {
                     borderBottomColor: ThemeColors.divider,
                 },
-                '&:not($disabled):hover:before': {
+                "&:not($disabled):hover:before": {
                     borderBottomWidth: 1,
                     borderBottomColor: BlackBorder,
                 },
-                '&$disabled:before': {
+                "&$disabled:before": {
                     borderBottomColor: ThemeColors.divider,
-                    borderBottomStyle: 'solid',
+                    borderBottomStyle: "solid",
                 },
-                '&$error:not($focused):after': {
+                "&$error:not($focused):after": {
                     borderBottomWidth: 1,
                 },
-                '&$error:not($focused)&:hover:after': {
+                "&$error:not($focused)&:hover:after": {
                     borderBottomColor: ThemeColors.error.dark,
                 },
             },
@@ -746,33 +795,33 @@ export const blueTheme: ThemeOptions = {
         MuiFilledInput: {
             root: {
                 backgroundColor: ThemeColors.background.default,
-                '&:hover': {
+                "&:hover": {
                     backgroundColor: BLUIColors.white[400],
                 },
-                '&$focused': {
+                "&$focused": {
                     backgroundColor: ThemeColors.background.default,
                 },
-                '&$disabled': {
+                "&$disabled": {
                     color: Color(ThemeColors.text.primary).alpha(0.3).string(),
                     backgroundColor: BLUIColors.white[100],
-                    pointerEvents: 'none',
+                    pointerEvents: "none",
                 },
             },
             input: {
-                '&:-webkit-autofill': {
-                    '-webkit-box-shadow': `0 0 0 30px ${ThemeColors.background.default} inset`,
+                "&:-webkit-autofill": {
+                    "-webkit-box-shadow": `0 0 0 30px ${ThemeColors.background.default} inset`,
                 },
             },
             underline: {
-                '&:before': {
+                "&:before": {
                     borderBottomColor: ThemeColors.divider,
                 },
-                '&$error:not($focused):after': {
+                "&$error:not($focused):after": {
                     borderBottomWidth: 1,
                 },
-                '&$disabled:before': {
+                "&$disabled:before": {
                     borderBottomColor: ThemeColors.divider,
-                    borderBottomStyle: 'solid',
+                    borderBottomStyle: "solid",
                 },
             },
             focused: {},
@@ -780,19 +829,19 @@ export const blueTheme: ThemeOptions = {
         },
         MuiOutlinedInput: {
             root: {
-                '& $notchedOutline': {
+                "& $notchedOutline": {
                     borderColor: ThemeColors.divider,
                 },
-                '&:hover $notchedOutline': {
+                "&:hover $notchedOutline": {
                     borderColor: BLUIColors.gray[500],
                 },
-                '&$error$colorSecondary$focused $notchedOutline': {
+                "&$error$colorSecondary$focused $notchedOutline": {
                     borderColor: ThemeColors.error.main,
                 },
-                '&$error:hover:not($focused) $notchedOutline': {
+                "&$error:hover:not($focused) $notchedOutline": {
                     borderColor: ThemeColors.error.dark,
                 },
-                '&$disabled $notchedOutline': {
+                "&$disabled $notchedOutline": {
                     borderColor: ThemeColors.divider,
                 },
             },
@@ -807,13 +856,13 @@ export const blueTheme: ThemeOptions = {
         MuiFormLabel: {
             root: {
                 color: ThemeColors.text.secondary,
-                '&$disabled': {
+                "&$disabled": {
                     color: ThemeColors.action.disabled,
                 },
-                '&$filled:not($disabled):not($focused):not($error)': {
+                "&$filled:not($disabled):not($focused):not($error)": {
                     color: ThemeColors.text.primary,
                 },
-                '&$error$colorSecondary$focused': {
+                "&$error$colorSecondary$focused": {
                     color: ThemeColors.error.main,
                 },
             },
@@ -825,7 +874,7 @@ export const blueTheme: ThemeOptions = {
         },
         MuiFormHelperText: {
             root: {
-                '&$disabled': {
+                "&$disabled": {
                     color: ThemeColors.action.disabled,
                 },
             },
@@ -839,12 +888,12 @@ export const blueTheme: ThemeOptions = {
                 backgroundColor: ThemeColors.background.paper,
             },
             groupedHorizontal: {
-                '&:not(:first-child)': {
+                "&:not(:first-child)": {
                     marginLeft: 0,
                 },
             },
             groupedVertical: {
-                '&:not(:first-child)': {
+                "&:not(:first-child)": {
                     marginTop: 0,
                 },
             },
@@ -855,13 +904,15 @@ export const blueTheme: ThemeOptions = {
                 backgroundColor: ThemeColors.background.paper,
                 color: ThemeColors.text.hint,
                 borderColor: BLUIColors.gray[100],
-                '&:hover': {
-                    backgroundColor: Color(BLUIColors.black[500]).alpha(0.05).string(),
+                "&:hover": {
+                    backgroundColor: Color(BLUIColors.black[500])
+                        .alpha(0.05)
+                        .string(),
                 },
-                '&$selected': {
+                "&$selected": {
                     backgroundColor: ThemeColors.primary.light,
                     color: ThemeColors.primary.main,
-                    '&:hover': {
+                    "&:hover": {
                         backgroundColor: BLUIColors.blue[100],
                     },
                 },
