@@ -23,7 +23,7 @@ const ThemeColors = {
     error: createSimplePalette(BLUIColors.red),
     success: createSimplePalette(BLUIColors.green),
     info: createSimplePalette(BLUIColors.lightBlue),
-    divider: Color(BLUIColors.black[200]).alpha(0.36).string(),
+    divider: Color(BLUIColors.red[500]).alpha(0.36).string(),
     warning: {
         light: BLUIColors.yellow[100],
         main: BLUIColors.yellow[500],
