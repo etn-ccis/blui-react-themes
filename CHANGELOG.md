@@ -1,5 +1,16 @@
 # Changelog
 
+## v6.1.1 (Unreleased)
+
+### Fixed
+
+-   Fix light theme to use black 500 for divider. ([#17](https://github.com/brightlayer-ui/react-themes/issues/17)).
+
+### Changed
+
+-   Updated MUI `<Tooltip>` font size to .75rem ([#8](https://github.com/brightlayer-ui/react-themes/issues/8)).
+-   Changed MUI `<TableSortLabel>` light theme hovered icon color to text secondary and non-hovered icon opacity to `0.36` ([#11](https://github.com/brightlayer-ui/react-themes/issues/11)).
+
 ## v6.1.0 (November 8, 2021)
 
 ### Changed
