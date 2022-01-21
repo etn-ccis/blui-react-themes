@@ -653,13 +653,13 @@ export const blueTheme: ThemeOptions = {
                 '&:hover': {
                     color: ThemeColors.text.primary,
                     '& $icon': {
-                        color: BLUIColors.black[300],
+                        color: ThemeColors.text.secondary,
                         opacity: 1,
                     },
                 },
             },
             icon: {
-                opacity: 1,
+                opacity: 0.36,
             },
         },
 
