@@ -5,6 +5,7 @@
 ### Fixed
 
 -   Fix light theme to use black 500 for divider. ([#17](https://github.com/brightlayer-ui/react-themes/issues/17)).
+-   Fixed MUI `<Input>` `filled` variant's background color when focused on mobile devices ([#2](https://github.com/brightlayer-ui/react-themes/issues/2)).
 
 ### Changed
 

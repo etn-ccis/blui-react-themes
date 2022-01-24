@@ -13,8 +13,11 @@ import {
 } from "./shared";
 import * as BLUIColors from "@brightlayer-ui/colors";
 import Color from "color";
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
-/* 
+const breakpoints = createBreakpoints({});
+
+/*
     Variable color definitions so we can reuse them in the theme overrides below
 */
 const ThemeColors = {
