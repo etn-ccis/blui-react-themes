@@ -765,7 +765,7 @@ export const blueDarkTheme: ThemeOptions = {
             },
             icon: {
                 opacity: 1,
-                color: Color(BLUIColors.gray[500]).alpha(0.24).string()
+                color: Color(BLUIColors.black[200]).alpha(0.24).string()
             },
         },
 
