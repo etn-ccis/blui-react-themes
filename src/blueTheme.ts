@@ -13,9 +13,6 @@ import {
 } from "./shared";
 import * as BLUIColors from "@brightlayer-ui/colors";
 import Color from "color";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
-
-const breakpoints = createBreakpoints({});
 
 /*
     Variable color definitions so we can reuse them in the theme overrides below
@@ -801,12 +798,10 @@ export const blueTheme: ThemeOptions = {
             root: {
                 backgroundColor: ThemeColors.background.default,
                 "&:hover": {
-                    [breakpoints.up('sm')]: {
+                    "@media (hover: none)": {
                         backgroundColor: BLUIColors.white[400]
                     },
-                    [breakpoints.down('sm')]: {
-                        backgroundColor: BLUIColors.white[400],
-                    }
+                    backgroundColor: BLUIColors.white[400]
                 },
                 "&$focused": {
                     backgroundColor: ThemeColors.background.default,
