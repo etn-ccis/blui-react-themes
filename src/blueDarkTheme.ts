@@ -725,19 +725,11 @@ export const blueDarkTheme: ThemeOptions = {
         MuiTableRow: {
             root: {
                 color: ThemeColors.text.primary,
-                backgroundColor: BLUIColors.darkBlack[300],
+                backgroundColor: ThemeColors.background.paper,
                 "&$hover:hover": {
                     backgroundColor: Color(BLUIColors.darkBlack[300])
                         .mix(Color(MediumBlackBackground), 0.5)
                         .string(),
-                },
-                "&:nth-of-type(odd):not($selected)": {
-                    backgroundColor: ThemeColors.background.paper,
-                    "&$hover:hover": {
-                        backgroundColor: Color(ThemeColors.background.paper)
-                            .mix(Color(MediumBlackBackground), 0.5)
-                            .string(),
-                    },
                 },
                 "&$selected": {
                     backgroundColor: Color(ThemeColors.primary.dark)

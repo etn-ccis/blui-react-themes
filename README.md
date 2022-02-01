@@ -59,3 +59,6 @@ import '@brightlayer-ui/react-themes/open-sans';
 ## Demo
 
 [View on Code Sandbox](https://codesandbox.io/s/github/brightlayer-ui/react-showcase-demo)
+
+## Zebra Striped Table Demo
+[View on Code Sandbox](https://codesandbox.io/s/5oees?file=/demo.js)
