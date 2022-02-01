@@ -801,7 +801,12 @@ export const blueTheme: ThemeOptions = {
             root: {
                 backgroundColor: ThemeColors.background.default,
                 "&:hover": {
-                    backgroundColor: BLUIColors.white[400],
+                    [breakpoints.up('sm')]: {
+                        backgroundColor: BLUIColors.white[400]
+                    },
+                    [breakpoints.down('sm')]: {
+                        backgroundColor: BLUIColors.white[400],
+                    }
                 },
                 "&$focused": {
                     backgroundColor: ThemeColors.background.default,
