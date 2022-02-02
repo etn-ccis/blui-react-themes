@@ -59,3 +59,7 @@ import '@brightlayer-ui/react-themes/open-sans';
 ## Demo
 
 [View on Code Sandbox](https://codesandbox.io/s/github/brightlayer-ui/react-showcase-demo)
+
+## Common Overrides
+
+See the [Common Overrides](https://github.com/brightlayer-ui/react-themes/blob/master/CommonOverrides.md) for react themes.

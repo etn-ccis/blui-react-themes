@@ -13,6 +13,9 @@
 -   Updated `<TableSortLabel>` styles ([#11](https://github.com/brightlayer-ui/react-themes/issues/11)).
 -   Updated `<Table>` styles ([#16](https://github.com/brightlayer-ui/react-themes/issues/16)).
 
+### Added
+-   Added `CommonOverrides.md` for documentation and examples ([#16](https://github.com/brightlayer-ui/react-themes/issues/16)).
+
 ## v6.1.0 (November 8, 2021)
 
 ### Changed
