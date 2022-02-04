@@ -667,7 +667,6 @@ export const blueTheme: ThemeOptions = {
         },
         MuiTableRow: {
             root: {
-                backgroundColor: ThemeColors.background.paper,
                 "&$hover:hover": {
                     backgroundColor: Color(BLUIColors.white[100])
                         .mix(Color(BLUIColors.black[50]), 0.5)
