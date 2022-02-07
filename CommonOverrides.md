@@ -11,7 +11,7 @@ If you want to override a single table:
 ```ts
 import Color from 'color';
 import * as BLUIColors from '@brightlayer-ui/colors';
-import { Table }  from '@material-ui';
+import { Table }  from '@material-ui/core';
 
 ...
 const useStyles = () => makestyles ((theme: Theme) => {
