@@ -21,11 +21,11 @@ const useStyles = () => makestyles ((theme: Theme) => {
         backgroundColor: BLUIColors.white[100],
         "&:hover": {
             backgroundColor: Color(BLUIColors.white[100]).mix(Color(BLUIColors.black[50]), 0.5).string()
-            },
+        },
         "&:nth-of-type(odd)": {
-            backgroundColor: BLUIColors.black[900],
-        "&:hover": {
-            backgroundColor: Color(BLUIColors.white[100]).mix(Color(BLUIColors.black[50]), 0.5).string()
+            backgroundColor: BLUIColors.white[50],
+            "&:hover": {
+                backgroundColor: Color(BLUIColors.white[50]).mix(Color(BLUIColors.black[50]), 0.5).string()
             }
         }
     }
@@ -65,9 +65,9 @@ import Color from 'color';
                                     .string(),
                             },
                             '&:nth-of-type(odd)': {
-                                backgroundColor: BLUIColors.black[900],
+                                backgroundColor: BLUIColors.white[50],
                                 '&:hover': {
-                                    backgroundColor: Color(BLUIColors.black[900])
+                                    backgroundColor: Color(BLUIColors.white[50])
                                         .mix(Color(BLUIColors.black[50]), 0.5)
                                         .string(),
                                 },
@@ -81,4 +81,5 @@ import Color from 'color';
     >
     {/* Your table contents */}
 </ThemeProvider>
+
 ```
