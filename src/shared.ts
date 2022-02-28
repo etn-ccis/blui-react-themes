@@ -41,6 +41,7 @@ export const typography = {
         lineHeight: '1.67',
     },
 };
+
 export const createSimpleLightPalette = (color: BLUIColor): SimplePaletteColorOptions => ({
     light: color[50],
     main: color[500],

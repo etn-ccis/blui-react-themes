@@ -13,6 +13,7 @@ import {
 } from "./shared";
 import * as BLUIColors from "@brightlayer-ui/colors";
 import Color from "color";
+import shadows from '@mui/material/styles/shadows';
 
 /*
     Variable color definitions so we can reuse them in the theme overrides below
@@ -142,7 +143,7 @@ export const blueTheme = createTheme ({
                 contained: {
                     backgroundColor: ThemeColors.background.paper,
                     color: ThemeColors.text.primary,
-                    "&.MuiButton-disableElevation:not(.MuiButton-containedPrimary):not(.MuiButton-containedSecondary)":
+                    "& .MuiButton-disableElevation:not(.MuiButton-containedPrimary):not(.MuiButton-containedSecondary)":
                         {
                             backgroundColor: BLUIColors.white[500],
                             "&:hover": {
@@ -166,6 +167,8 @@ export const blueTheme = createTheme ({
                     },
                 },
                 containedPrimary: {
+                    backgroundColor: ThemeColors.primary.main,
+                    color: WhiteText,
                     "&:hover": {
                         backgroundColor: BLUIColors.blue[300],
                     },
@@ -177,6 +180,8 @@ export const blueTheme = createTheme ({
                     },
                 },
                 containedSecondary: {
+                    backgroundColor: ThemeColors.secondary.main,
+                    color: WhiteText,
                     "&:hover": {
                         backgroundColor: BLUIColors.lightBlue[300],
                     },
@@ -253,23 +258,37 @@ export const blueTheme = createTheme ({
         // BUTTON GROUP OVERRIDES
         MuiButtonGroup: {
             styleOverrides: {
+                root: {
+                    "&:hover": {
+                        backgroundColor: Color(BLUIColors.black[500])
+                            .alpha(0.05)
+                            .string(),
+                        boxShadow: shadows[4],
+                    },
+                },
                 groupedText: {
-                    "&:not(:last-child)&.Mui-disabled": {
+                    "&:not(:last-child)": {
                         borderColor: ThemeColors.divider,
                     },
                 },
                 groupedTextPrimary: {
-                    "&:not(:last-child)&.Mui-disabled": {
+                    "&:not(:last-child)": {
                         borderColor: ThemeColors.divider,
                     },
                 },
                 groupedTextSecondary: {
-                    "&:not(:last-child)&.Mui-disabled": {
+                    "&:not(:last-child)": {
                         borderColor: ThemeColors.divider,
                     },
                 },
-                disabled: {},
-            }
+                disabled: {
+                    "&.Mui-disabled": {
+                        border: `1px solid ${Color(BLUIColors.black[500])
+                            .alpha(0.12)
+                            .string()}`,
+                    },
+                },
+            },
         },
 
         // CHECKBOX OVERRIDES
@@ -278,7 +297,7 @@ export const blueTheme = createTheme ({
                 root: {
                     color: ThemeColors.action.active,
                 },
-            }
+            },
         },
 
         // CHIP OVERRIDES
@@ -332,14 +351,14 @@ export const blueTheme = createTheme ({
                     },
                 },
                 colorPrimary: {
-                    "&:not($outlinedPrimary).Mui-disabled": {
+                    "&:not(.MuiChip-outlinedPrimary).Mui-disabled": {
                         backgroundColor: ThemeColors.primary.light,
                         color: BLUIColors.blue[200],
                         opacity: 1,
                     },
                 },
                 colorSecondary: {
-                    "&:not($outlinedSecondary).Mui-disabled": {
+                    "&:not(.MuiChip-outlinedSecondary).Mui-disabled": {
                         backgroundColor: ThemeColors.secondary.light,
                         color: BLUIColors.lightBlue[200],
                         opacity: 1,
@@ -450,7 +469,45 @@ export const blueTheme = createTheme ({
                 label: {},
                 avatarColorPrimary: {},
                 avatarColorSecondary: {},
-            } 
+            } ,
+        },
+
+        // FAB OVERRIDES
+        MuiFab: {
+            styleOverrides: {
+                root: {
+                    textTransform: "none",
+                    backgroundColor: ThemeColors.background.paper,
+                    color: ThemeColors.text.primary,
+                    "&:hover": {
+                        backgroundColor: Color(BLUIColors.black[500])
+                            .alpha(0.05)
+                            .string(),
+                    },
+                    "&.Mui-disabled": {
+                        backgroundColor: ThemeColors.background.paper,
+                        border: `1px solid ${Color(BlackBorder)
+                            .alpha(0.12)
+                            .string()}`,
+                        color: ThemeColors.action.disabled,
+                    },
+                },
+                primary: {
+                    backgroundColor: ThemeColors.primary.main,
+                    color: WhiteText,
+                    "&:hover": {
+                        backgroundColor: BLUIColors.blue[300],
+                    },
+                },
+                secondary: {
+                    backgroundColor: ThemeColors.secondary.main,
+                    color: WhiteText,
+                    "&:hover": {
+                        backgroundColor: BLUIColors.lightBlue[300],
+                    },
+                },
+                disabled: {},
+            },
         },
       },
 });
