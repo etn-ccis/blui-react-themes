@@ -10,7 +10,7 @@ import {
     typography,
     createSimpleDarkPalette as createSimplePalette,
 } from "./shared";
-import { ThemeOptions } from "@material-ui/core/styles/createMuiTheme";
+import { DeprecatedThemeOptions } from '@mui/material/styles';
 import Color from "color";
 import * as BLUIColors from "@brightlayer-ui/colors";
 
@@ -56,11 +56,11 @@ const Spacing = 8;
     Refer to https://material-ui.com/customization/default-theme/ for a list of properties that are available
     to customize in our themes. These have changed periodically from version to version of Material UI.
 */
-export const blueDarkTheme: ThemeOptions = {
+export const blueDarkTheme: DeprecatedThemeOptions = {
     direction: "ltr",
     typography: typography,
     palette: {
-        type: "dark",
+        mode: "dark",
         primary: ThemeColors.primary,
         secondary: ThemeColors.secondary,
         error: ThemeColors.error,
@@ -594,20 +594,35 @@ export const blueDarkTheme: ThemeOptions = {
             },
         },
         MuiStep: {
-            completed: {
-                // Place a white background behind the icons so that the checks will not be see-through
-                "& .MuiStepLabel-iconContainer:before": {
-                    content: '""',
-                    position: "absolute",
-                    display: "block",
-                    top: "5%",
-                    right: "5%",
-                    bottom: "5%",
-                    left: "5%",
-                    backgroundColor: BLUIColors.white[50],
-                    borderRadius: "50%",
-                },
-            },
+            root: {
+                "&.Mui-completed": {
+                    "& .MuiStepLabel-iconContainer:before": {
+                        content: '""',
+                        position: "absolute",
+                        display: "block",
+                        top: "5%",
+                        right: "5%",
+                        bottom: "5%",
+                        left: "5%",
+                        backgroundColor: 'red',
+                        borderRadius: "50%",
+                    }
+                }
+            }
+            // completed: {
+            //     // Place a white background behind the icons so that the checks will not be see-through
+            //     "& .MuiStepLabel-iconContainer:before": {
+            //         content: '""',
+            //         position: "absolute",
+            //         display: "block",
+            //         top: "5%",
+            //         right: "5%",
+            //         bottom: "5%",
+            //         left: "5%",
+            //         backgroundColor: BLUIColors.white[50],
+            //         borderRadius: "50%",
+            //     },
+            // },
         },
         MuiStepIcon: {
             root: {
@@ -789,7 +804,7 @@ export const blueDarkTheme: ThemeOptions = {
                     color: ThemeColors.primary.main,
                 },
             },
-            wrapper: {},
+            // wrapper: {},
             selected: {},
         },
         MuiTabs: {
