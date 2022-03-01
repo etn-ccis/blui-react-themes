@@ -52,10 +52,10 @@ const BlackBorder = BLUIColors.black[500];
 const Spacing = 8;
 
 /*
-    Refer to https://material-ui.com/customization/default-theme/ for a list of properties that are available
+    Refer to https://mui.com/customization/default-theme/ for a list of properties that are available
     to customize in our themes. These have changed periodically from version to version of Material UI.
 */
-export const blueTheme = createTheme ({
+export const blueTheme = createTheme({
     direction: "ltr",
     typography: typography,
     palette: {
@@ -111,7 +111,7 @@ export const blueTheme = createTheme ({
                 },
             }
         },
-        
+
         MuiBottomNavigationAction: {
             styleOverrides: {
                 root: {
@@ -138,15 +138,15 @@ export const blueTheme = createTheme ({
                     backgroundColor: ThemeColors.background.paper,
                     color: ThemeColors.text.primary,
                     "& .MuiButton-disableElevation:not(.MuiButton-containedPrimary):not(.MuiButton-containedSecondary)":
-                        {
-                            backgroundColor: BLUIColors.white[500],
-                            "&:hover": {
-                                backgroundColor: BLUIColors.white[300],
-                            },
-                            "&.Mui-disabled": {
-                                borderWidth: 0,
-                            },
+                    {
+                        backgroundColor: BLUIColors.white[500],
+                        "&:hover": {
+                            backgroundColor: BLUIColors.white[300],
                         },
+                        "&.Mui-disabled": {
+                            borderWidth: 0,
+                        },
+                    },
                     "&:hover": {
                         backgroundColor: Color(BLUIColors.black[500])
                             .alpha(0.05)
@@ -257,7 +257,7 @@ export const blueTheme = createTheme ({
                         backgroundColor: Color(BLUIColors.black[500])
                             .alpha(0.05)
                             .string(),
-                        
+
                     },
                     // "&.Mui-disabled": {
                     "&.Mui-disabled": {
@@ -649,19 +649,19 @@ export const blueTheme = createTheme ({
                 // },
                 root: {
                     "&.Mui-completed": {
-                      "& .MuiStepLabel-iconContainer:before": {
-                        content: '""',
-                        position: "absolute",
-                        display: "block",
-                        top: "5%",
-                        right: "5%",
-                        bottom: "5%",
-                        left: "5%",
-                        backgroundColor: ThemeColors.background.paper,
-                        borderRadius: "50%",
-                      }
+                        "& .MuiStepLabel-iconContainer:before": {
+                            content: '""',
+                            position: "absolute",
+                            display: "block",
+                            top: "5%",
+                            right: "5%",
+                            bottom: "5%",
+                            left: "5%",
+                            backgroundColor: ThemeColors.background.paper,
+                            borderRadius: "50%",
+                        }
                     }
-                  }
+                }
             },
         },
 
@@ -672,10 +672,10 @@ export const blueTheme = createTheme ({
                     zIndex: 1,
                     "&.Mui-active": {
                         "& .MuiStepIcon-text": {
-                          fill: WhiteText,
-                          fontWeight: 600,
-                        }
-                      }
+                            fill: WhiteText,
+                            fontWeight: 600,
+                        },
+                    },
                 },
                 text: {
                     fill: ThemeColors.text.primary,
@@ -1047,5 +1047,5 @@ export const blueTheme = createTheme ({
                 },
             },
         },
-      },
+    },
 });
