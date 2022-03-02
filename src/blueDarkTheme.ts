@@ -602,7 +602,6 @@ export const blueDarkTheme = createTheme({
         MuiSnackbarContent: {
             styleOverrides: {
                 root: {
-                    // backgroundColor: BLUIColors.black[900],
                     color: BlackText,
                     "& .MuiButton-textPrimary": {
                         color: ThemeColors.primary.dark,
@@ -625,20 +624,6 @@ export const blueDarkTheme = createTheme({
 
         MuiStep: {
             styleOverrides: {
-                // completed: {
-                //     // Place a white background behind the icons so that the checks will not be see-through
-                //     "& .MuiStepLabel-iconContainer:before": {
-                //         content: '""',
-                //         position: "absolute",
-                //         display: "block",
-                //         top: "5%",
-                //         right: "5%",
-                //         bottom: "5%",
-                //         left: "5%",
-                //         backgroundColor: ThemeColors.background.paper,
-                //         borderRadius: "50%",
-                //     },
-                // },
                 root: {
                     "&.Mui-completed": {
                         "& .MuiStepLabel-iconContainer:before": {
@@ -672,12 +657,6 @@ export const blueDarkTheme = createTheme({
                 text: {
                     fill: ThemeColors.text.primary,
                 },
-                // active: {
-                //     "& $text": {
-                //         fill: WhiteText,
-                //         fontWeight: 600,
-                //     },
-                // },
             },
         },
 
@@ -837,12 +816,6 @@ export const blueDarkTheme = createTheme({
                         fontWeight: 600,
                     },
                 },
-                // removed wrapper class in MUIv5
-                // labelIcon: {
-                //     "& $wrapper > *:first-child": {
-                //         marginBottom: 0,
-                //     },
-                // },
                 textColorInherit: {
                     color: ThemeColors.text.secondary,
                     opacity: 1,

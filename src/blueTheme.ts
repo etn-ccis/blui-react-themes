@@ -37,14 +37,11 @@ const ThemeColors = {
     text: {
         primary: BLUIColors.black[500],
         secondary: BLUIColors.gray[500],
-        // disabled: Color(BLUIColors.black[500]).alpha(0.3).string(),
         hint: BLUIColors.gray[500],
     },
     action: {
-        // hover: Color(BLUIColors.black[50]).alpha(0.1).string(),
         active: BLUIColors.gray[500],
         disabled: Color(BLUIColors.black[500]).alpha(0.3).string(),
-        // disabledBackground: Color(BLUIColors.black[200]).alpha(0.24).string(),
     },
 };
 const WhiteText = BLUIColors.white[50];
@@ -128,6 +125,7 @@ export const blueTheme = createTheme({
                 label: {},
             }
         },
+
         // BUTTON OVERRIDES
         MuiButton: {
             styleOverrides: {
@@ -259,13 +257,11 @@ export const blueTheme = createTheme({
                             .string(),
 
                     },
-                    // "&.Mui-disabled": {
                     "&.Mui-disabled": {
                         border: `1px solid ${Color(BLUIColors.black[500])
                             .alpha(0.12)
                             .string()}`,
                     },
-                    // }
                 },
                 contained: {
                     "&.MuiButtonGroup-grouped": {
@@ -289,13 +285,6 @@ export const blueTheme = createTheme({
                         borderColor: ThemeColors.divider,
                     },
                 },
-                // disabled: {
-                //     "&.Mui-disabled": {
-                //         border: `1px solid ${Color(BLUIColors.black[500])
-                //             .alpha(0.12)
-                //             .string()}`,
-                //     },
-                // },
             },
         },
 
@@ -318,7 +307,6 @@ export const blueTheme = createTheme({
                     "& .MuiChip-avatar": {
                         backgroundColor: ThemeColors.primary.main,
                         color: WhiteText,
-                        // marginLeft: Spacing,
                         marginRight: -4,
                     },
                     "& .MuiChip-avatarColorPrimary": {
@@ -399,13 +387,11 @@ export const blueTheme = createTheme({
                     },
                 },
                 deleteIconOutlinedColorPrimary: {
-                    // color: BLUIColors.blue[200],
                     "&:hover": {
                         color: ThemeColors.primary.main,
                     },
                 },
                 deleteIconOutlinedColorSecondary: {
-                    // color: BLUIColors.lightBlue[200],
                     "&:hover": {
                         color: ThemeColors.secondary.main,
                     },
@@ -576,17 +562,12 @@ export const blueTheme = createTheme({
                 },
                 track: {
                     height: 6,
-                    // Size medium will give default CSS
-                    // marginTop: -1,
                 },
                 rail: {
                     height: 4,
                     backgroundColor: BLUIColors.black[100],
                 },
                 thumb: {
-                    // height: 20,
-                    // width: 20,
-                    // marginTop: -8,
                     backgroundColor: ThemeColors.primary.main,
                 },
                 thumbColorSecondary: {
@@ -594,12 +575,10 @@ export const blueTheme = createTheme({
                 },
                 mark: {
                     backgroundColor: BLUIColors.blue[200],
-                    // marginTop: 1,
                 },
                 markActive: {
                     backgroundColor: BLUIColors.blue[200],
                 },
-                // CSS has changed
                 valueLabel: {
                     backgroundColor: BLUIColors.blue[200],
                 }
@@ -633,20 +612,6 @@ export const blueTheme = createTheme({
 
         MuiStep: {
             styleOverrides: {
-                // completed: {
-                //     // Place a white background behind the icons so that the checks will not be see-through
-                //     "& .MuiStepLabel-iconContainer:before": {
-                //         content: '""',
-                //         position: "absolute",
-                //         display: "block",
-                //         top: "5%",
-                //         right: "5%",
-                //         bottom: "5%",
-                //         left: "5%",
-                //         backgroundColor: ThemeColors.background.paper,
-                //         borderRadius: "50%",
-                //     },
-                // },
                 root: {
                     "&.Mui-completed": {
                         "& .MuiStepLabel-iconContainer:before": {
@@ -680,12 +645,6 @@ export const blueTheme = createTheme({
                 text: {
                     fill: ThemeColors.text.primary,
                 },
-                // active: {
-                //     "& .MuiStepIcon-text": {
-                //         fill: WhiteText,
-                //         fontWeight: 600,
-                //     },
-                // },
             },
         },
 
@@ -828,12 +787,6 @@ export const blueTheme = createTheme({
                         fontWeight: 600,
                     },
                 },
-                // removed wrapper class in MUIv5
-                // labelIcon: {
-                //     "& $wrapper > *:first-child": {
-                //         marginBottom: 0,
-                //     },
-                // },
                 textColorPrimary: {
                     color: WhiteText,
                     opacity: 0.7,
