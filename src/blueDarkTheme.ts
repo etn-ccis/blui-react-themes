@@ -680,5 +680,403 @@ export const blueDarkTheme = createTheme({
                 // },
             },
         },
+
+        MuiStepLabel: {
+            styleOverrides: {
+                label: {
+                    color: ThemeColors.text.secondary,
+                    "&.Mui-active": {
+                        fontWeight: 600,
+                        color: ThemeColors.primary.main,
+                    },
+                    "&.Mui-completed": {
+                        color: ThemeColors.text.secondary,
+                        fontWeight: 600,
+                    },
+                },
+                iconContainer: {
+                    position: "relative",
+                },
+            },
+        },
+
+        // SWITCH OVERRIDES
+        MuiSwitch: {
+            styleOverrides: {
+                switchBase: {
+                    color: ThemeColors.text.primary,
+                    "&.Mui-checked + .MuiSwitch-track": {
+                        opacity: 0.38,
+                    },
+                    "&.Mui-checked": {
+                        color: ThemeColors.secondary.main,
+                        "&.Mui-disabled": {
+                            color: Color(ThemeColors.secondary.main)
+                                .mix(Color(ThemeColors.background.paper), 0.5)
+                                .string(),
+                        },
+                        "&.Mui-disabled + .MuiSwitch-track": {
+                            backgroundColor: ThemeColors.secondary.main,
+                        },
+                    },
+                },
+                colorPrimary: {
+                    "&.Mui-disabled": {
+                        color: Color(BLUIColors.white[50])
+                            .mix(Color(ThemeColors.background.paper), 0.5)
+                            .string(),
+                    },
+                    "&.Mui-disabled + .MuiSwitch-track": {
+                        backgroundColor: BLUIColors.black[300],
+                    },
+                    "&.Mui-checked": {
+                        color: ThemeColors.primary.main,
+                        "&.Mui-disabled": {
+                            color: Color(ThemeColors.primary.main)
+                                .mix(Color(ThemeColors.background.paper), 0.5)
+                                .string(),
+                        },
+                        "&.Mui-disabled + .MuiSwitch-track": {
+                            opacity: 0.38,
+                            backgroundColor: Color(ThemeColors.primary.main)
+                                .mix(Color(ThemeColors.background.paper), 0.5)
+                                .string(),
+                        },
+                    },
+                },
+                colorSecondary: {
+                    "&.Mui-disabled": {
+                        color: Color(BLUIColors.white[50])
+                            .mix(Color(ThemeColors.background.paper), 0.5)
+                            .string(),
+                    },
+                    "&.Mui-disabled + .MuiSwitch-track": {
+                        backgroundColor: BLUIColors.black[300],
+                    },
+                },
+                track: {
+                    backgroundColor: BLUIColors.black[300],
+                    opacity: 0.38,
+                },
+            },
+        },
+
+        // TABLE OVERRIDES
+        MuiTableCell: {
+            styleOverrides: {
+                head: {
+                    fontWeight: 600,
+                },
+            },
+        },
+        MuiTableHead: {
+            styleOverrides: {
+                root: {
+                    background: ThemeColors.background.paper,
+                },
+            },
+        },
+
+        MuiTableRow: {
+            styleOverrides: {
+                root: {
+                    color: ThemeColors.text.primary,
+                    backgroundColor: BLUIColors.darkBlack[300],
+                    "&.MuiTableRow-hover:hover": {
+                        backgroundColor: Color(BLUIColors.darkBlack[300])
+                            .mix(Color(MediumBlackBackground), 0.5)
+                            .string(),
+                    },
+                    "&:nth-of-type(odd):not(.Mui-selected)": {
+                        backgroundColor: ThemeColors.background.paper,
+                        "&.MuiTableRow-hover:hover": {
+                            backgroundColor: Color(ThemeColors.background.paper)
+                                .mix(Color(MediumBlackBackground), 0.5)
+                                .string(),
+                        },
+                    },
+                    "&.Mui-selected": {
+                        backgroundColor: Color(ThemeColors.primary.dark)
+                            .alpha(0.2)
+                            .string(),
+                        "&.MuiTableRow-hover:hover": {
+                            backgroundColor: Color(ThemeColors.primary.dark)
+                                .mix(Color(MediumBlackBackground), 0.5)
+                                .alpha(0.2)
+                                .string(),
+                        },
+                    },
+                },
+            },
+        },
+
+        MuiTableSortLabel: {
+            styleOverrides: {
+                root: {
+                    "&:hover": {
+                        color: ThemeColors.text.primary,
+                        "& .MuiTableSortLabel-icon": {
+                            color: ThemeColors.text.secondary,
+                            opacity: 1,
+                        },
+                    },
+                },
+                icon: {
+                    opacity: 1,
+                    color: Color(BLUIColors.black[200]).alpha(0.24).string()
+                },
+            },
+        },
+
+        // TABS OVERRIDES
+        MuiTab: {
+            styleOverrides: {
+                root: {
+                    fontWeight: 400,
+                    "&.Mui-selected": {
+                        fontWeight: 600,
+                    },
+                },
+                // removed wrapper class in MUIv5
+                // labelIcon: {
+                //     "& $wrapper > *:first-child": {
+                //         marginBottom: 0,
+                //     },
+                // },
+                textColorInherit: {
+                    color: ThemeColors.text.secondary,
+                    opacity: 1,
+                    "&.Mui-selected": {
+                        color: ThemeColors.primary.main,
+                    },
+                },
+            },
+        },
+
+        MuiTabs: {
+            styleOverrides: {
+                root: {
+                    color: ThemeColors.text.secondary,
+                },
+                indicator: {
+                    backgroundColor: ThemeColors.primary.main,
+                },
+            },
+        },
+
+        // TOOLTIP OVERRIDES
+        MuiTooltip: {
+            styleOverrides: {
+                tooltip: {
+                    fontSize: "0.75rem",
+                },
+            },
+        },
+
+        // TEXT FIELD OVERRIDES
+        MuiInputBase: {
+            styleOverrides: {
+                root: {
+                    "&.Mui-disabled": {
+                        color: ThemeColors.text.disabled,
+                    },
+                },
+                input: {
+                    "&::placeholder": {
+                        color: BLUIColors.black[300],
+                        opacity: 0.36,
+                    },
+                    "&:-webkit-autofill": {
+                        "-webkit-box-shadow": `0 0 0 100px ${ThemeColors.background.paper} inset`,
+                        "-webkit-text-fill-color": ThemeColors.text.primary,
+                    },
+                },
+            },
+        },
+
+        MuiInput: {
+            styleOverrides: {
+                underline: {
+                    "&:before": {
+                        borderBottomColor: ThemeColors.divider,
+                    },
+                    "&:not(.Mui-disabled):hover:before": {
+                        borderBottomWidth: 1,
+                        borderBottomColor: BLUIColors.black[200],
+                    },
+                    "&:after": {
+                        borderBottomColor: ThemeColors.primary.dark,
+                    },
+                    "&.Mui-error.Mui-focused:after": {
+                        borderBottomColor: ThemeColors.error.dark,
+                    },
+                    "&.Mui-error:not(.Mui-focused):after": {
+                        borderBottomWidth: 1,
+                        borderBottomColor: ThemeColors.error.dark,
+                    },
+                    "&.Mui-error:not(.Mui-focused):hover:after": {
+                        borderBottomColor: ThemeColors.error.main,
+                    },
+                    "&.MuiInput-colorSecondary:not(.Mui-error):after": {
+                        borderBottomColor: ThemeColors.secondary.dark,
+                    },
+                    "&.Mui-disabled:before": {
+                        borderBottomColor: ThemeColors.divider,
+                        borderBottomStyle: "solid",
+                    },
+                },
+            },
+        },
+
+        MuiFilledInput: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: BLUIColors.black[800],
+                    "&:hover": {
+                        backgroundColor: BLUIColors.black[600],
+                    },
+                    "&.Mui-focused": {
+                        backgroundColor: BLUIColors.black[800],
+                    },
+                    "&.Mui-disabled": {
+                        color: ThemeColors.text.disabled,
+                        backgroundColor: Color(BLUIColors.black[800])
+                            .alpha(0.5)
+                            .string(),
+                        pointerEvents: "none",
+                    },
+                },
+                input: {
+                    "&:-webkit-autofill": {
+                        "-webkit-box-shadow": `0 0 0 100px ${BLUIColors.black[800]} inset`,
+                    },
+                },
+                underline: {
+                    "&:before": {
+                        borderBottomColor: ThemeColors.divider,
+                    },
+                    "&:after": {
+                        borderBottomColor: ThemeColors.primary.dark,
+                    },
+                    "&.Mui-error.Mui-focused:after": {
+                        borderBottomColor: ThemeColors.error.dark,
+                    },
+                    "&.Mui-error:not(.Mui-focused):after": {
+                        borderBottomWidth: 1,
+                        borderBottomColor: ThemeColors.error.dark,
+                    },
+                    "&.Mui-error:not(.Mui-focused):hover:after": {
+                        borderBottomColor: ThemeColors.error.main,
+                    },
+                    "&.Mui-disabled:before": {
+                        borderBottomStyle: "solid",
+                    },
+                    "&.MuiFilledInput-colorSecondary:not(.Mui-error):after": {
+                        borderBottomColor: ThemeColors.secondary.dark,
+                    },
+                },
+            },
+        },
+
+        MuiOutlinedInput: {
+            styleOverrides: {
+                root: {
+                    "&.Mui-error .MuiOutlinedInput-notchedOutline": {
+                        borderColor: ThemeColors.error.dark,
+                    },
+                    "&.Mui-disabled .MuiOutlinedInput-notchedOutline": {
+                        borderColor: ThemeColors.divider,
+                    },
+                    "&:hover .MuiOutlinedInput-notchedOutline": {
+                        borderColor: BLUIColors.black[200],
+                    },
+                    "&.Mui-error.MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                        borderColor: ThemeColors.error.dark,
+                    },
+                    "&.Mui-error:hover:not(.Mui-focused) .MuiOutlinedInput-notchedOutline": {
+                        borderColor: ThemeColors.error.main,
+                    },
+                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                        borderColor: ThemeColors.primary.dark,
+                    },
+                    "&.MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                        borderColor: ThemeColors.secondary.dark,
+                    },
+                },
+                input: {
+                    "&:-webkit-autofill": {
+                        "-webkit-box-shadow": `0 0 0 100px ${BLUIColors.black[900]} inset`,
+                    },
+                },
+                notchedOutline: {
+                    borderColor: ThemeColors.divider,
+                },
+            },
+        },
+
+        MuiFormLabel: {
+            styleOverrides: {
+                root: {
+                    color: ThemeColors.text.secondary,
+                    "&.Mui-disabled": {
+                        color: ThemeColors.text.disabled,
+                    },
+                    "&.MuiFormLabel-filled:not(.Mui-disabled):not(.Mui-focused):not(.Mui-error)": {
+                        color: ThemeColors.text.primary,
+                    },
+                    "&.Mui-error.MuiFormLabel-colorSecondary.Mui-focused": {
+                        color: ThemeColors.error.main,
+                    },
+                },
+            },
+        },
+
+        // TOGGLE BUTTON OVERRIDES (LAB)
+        // @ts-ignore
+        MuiToggleButtonGroup: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: ThemeColors.background.paper,
+                },
+                groupedHorizontal: {
+                    "&:not(:first-child)": {
+                        marginLeft: 0,
+                    },
+                },
+                groupedVertical: {
+                    "&:not(:first-child)": {
+                        marginTop: 0,
+                    },
+                },
+            },
+        },
+
+        // @ts-ignore
+        MuiToggleButton: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: ThemeColors.background.paper,
+                    color: BLUIColors.gray[500],
+                    borderColor: Color(BLUIColors.black[200]).alpha(0.32).string(),
+                    "&.Mui-selected": {
+                        backgroundColor: Color(ThemeColors.primary.dark)
+                            .alpha(0.36)
+                            .string(),
+                        color: ThemeColors.primary.main,
+                        "&:hover": {
+                            backgroundColor: Color(ThemeColors.primary.main)
+                                .alpha(0.36)
+                                .string(),
+                        },
+                    },
+                    "&:hover": {
+                        backgroundColor: ThemeColors.action.hover,
+                    },
+                    "&.Mui-disabled": {
+                        color: ThemeColors.action.disabled,
+                    },
+                },
+            },
+        },
     },
 });
