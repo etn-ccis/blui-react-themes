@@ -9,10 +9,11 @@
 import { createTheme } from '@mui/material/styles';
 import {
     typography,
-    createSimpleLightPalette as createSimplePalette,
+    createSimpleDarkPalette as createSimplePalette,
 } from "./shared";
 import * as BLUIColors from "@brightlayer-ui/colors";
 import Color from "color";
+import shadows from '@mui/material/styles/shadows';
 
 /* 
     Variable color definitions so we can reuse them in the theme overrides below
@@ -77,6 +78,9 @@ export const blueDarkTheme = createTheme({
         // APP BAR OVERRIDES
         MuiAppBar: {
             styleOverrides: {
+                root: {
+                    backgroundImage: 'none',
+                },
                 colorDefault: {
                     color: ThemeColors.text.primary,
                     backgroundColor: BLUIColors.darkBlack[100],
@@ -264,6 +268,13 @@ export const blueDarkTheme = createTheme({
         // BUTTON GROUP OVERRIDES
         MuiButtonGroup: {
             styleOverrides: {
+                contained: {
+                    "&.MuiButtonGroup-grouped": {
+                        "&:hover": {
+                            boxShadow: shadows[4],
+                        },
+                    },
+                },
                 groupedText: {
                     "&:not(:last-child).Mui-disabled": {
                         borderColor: ThemeColors.divider,
@@ -334,6 +345,32 @@ export const blueDarkTheme = createTheme({
                         backgroundColor: BLUIColors.lightBlue[300],
                     },
                 },
+                colorPrimary: {
+                    color: WhiteText,
+                    backgroundColor: ThemeColors.primary.dark,
+                    "&.MuiChip-clickable:hover": {
+                        backgroundColor: BLUIColors.blue[300],
+                    },
+                    "& .MuiChip-deleteIconColorPrimary": {
+                        color: BLUIColors.blue[100],
+                        "&:hover": {
+                            color: WhiteText,
+                        },
+                    },
+                },
+                colorSecondary: {
+                    color: WhiteText,
+                    backgroundColor: ThemeColors.secondary.dark,
+                    "&.MuiChip-clickable:hover": {
+                        backgroundColor: BLUIColors.lightBlue[300],
+                    },
+                    "& .MuiChip-deleteIconColorPrimary": {
+                        color: BLUIColors.lightBlue[100],
+                        "&:hover": {
+                            color: WhiteText,
+                        },
+                    },
+                },
                 deleteIcon: {
                     fontSize: "1.125rem",
                     height: "1.125rem",
@@ -342,18 +379,6 @@ export const blueDarkTheme = createTheme({
                     color: ThemeColors.text.secondary,
                     "&:hover": {
                         color: ThemeColors.text.primary,
-                    },
-                },
-                deleteIconColorPrimary: {
-                    color: BLUIColors.blue[100],
-                    "&:hover": {
-                        color: WhiteText,
-                    },
-                },
-                deleteIconColorSecondary: {
-                    color: BLUIColors.lightBlue[100],
-                    "&:hover": {
-                        color: WhiteText,
                     },
                 },
                 deleteIconOutlinedColorPrimary: {
@@ -368,19 +393,11 @@ export const blueDarkTheme = createTheme({
                         color: ThemeColors.secondary.main,
                     },
                 },
-                colorPrimary: {
-                    color: WhiteText,
-                    backgroundColor: ThemeColors.primary.dark,
-                    "&.MuiChip-clickable:hover": {
-                        backgroundColor: BLUIColors.blue[300],
-                    },
+                iconColorPrimary: {
+                    color: 'inherit',
                 },
-                colorSecondary: {
-                    color: WhiteText,
-                    backgroundColor: ThemeColors.secondary.dark,
-                    "&.MuiChip-clickable:hover": {
-                        backgroundColor: BLUIColors.lightBlue[300],
-                    },
+                iconColorSecondary: {
+                    color: 'inherit',
                 },
                 outlined: {
                     backgroundColor: ThemeColors.background.paper,
@@ -573,16 +590,12 @@ export const blueDarkTheme = createTheme({
                 },
                 track: {
                     height: 6,
-                    marginTop: -1,
                 },
                 rail: {
                     height: 4,
                     backgroundColor: BLUIColors.black[300],
                 },
                 thumb: {
-                    height: 20,
-                    width: 20,
-                    marginTop: -8,
                     backgroundColor: ThemeColors.primary.main,
                 },
                 thumbColorSecondary: {
@@ -590,11 +603,13 @@ export const blueDarkTheme = createTheme({
                 },
                 mark: {
                     backgroundColor: ThemeColors.primary.dark,
-                    marginTop: 1,
                 },
                 markActive: {
                     backgroundColor: ThemeColors.primary.dark,
                 },
+                valueLabel: {
+                    backgroundColor: ThemeColors.primary.dark,
+                }
             }
         },
 
@@ -645,7 +660,6 @@ export const blueDarkTheme = createTheme({
         MuiStepIcon: {
             styleOverrides: {
                 root: {
-                    color: BLUIColors.white[500],
                     zIndex: 1,
                     "&.Mui-active": {
                         "& .MuiStepIcon-text": {

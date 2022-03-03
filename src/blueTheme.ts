@@ -473,11 +473,6 @@ export const blueTheme = createTheme({
                     marginLeft: Spacing,
                     marginRight: -4,
                 },
-                avatar: {},
-                disabled: {},
-                label: {},
-                avatarColorPrimary: {},
-                avatarColorSecondary: {},
             },
         },
 
@@ -636,6 +631,7 @@ export const blueTheme = createTheme({
                     color: BLUIColors.white[500],
                     zIndex: 1,
                     "&.Mui-active": {
+                        color: ThemeColors.primary.dark,
                         "& .MuiStepIcon-text": {
                             fill: WhiteText,
                             fontWeight: 600,
