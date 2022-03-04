@@ -748,8 +748,13 @@ export const blueTheme = createTheme({
                             .string(),
                         "&.MuiTableRow-hover:hover": {
                             backgroundColor: Color(ThemeColors.primary.main)
-                                .alpha(0.07)
+                                .alpha(0.05)
                                 .string(),
+                            "&.MuiTableRow-hover:hover": {
+                                backgroundColor: Color(ThemeColors.primary.main)
+                                    .alpha(0.07)
+                                    .string(),
+                            },
                         },
                     },
                 },

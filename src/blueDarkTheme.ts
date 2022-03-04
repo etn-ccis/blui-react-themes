@@ -774,19 +774,10 @@ export const blueDarkTheme = createTheme({
             styleOverrides: {
                 root: {
                     color: ThemeColors.text.primary,
-                    backgroundColor: BLUIColors.darkBlack[300],
                     "&.MuiTableRow-hover:hover": {
                         backgroundColor: Color(BLUIColors.darkBlack[300])
                             .mix(Color(MediumBlackBackground), 0.5)
                             .string(),
-                    },
-                    "&:nth-of-type(odd):not(.Mui-selected)": {
-                        backgroundColor: ThemeColors.background.paper,
-                        "&.MuiTableRow-hover:hover": {
-                            backgroundColor: Color(ThemeColors.background.paper)
-                                .mix(Color(MediumBlackBackground), 0.5)
-                                .string(),
-                        },
                     },
                     "&.Mui-selected": {
                         backgroundColor: Color(ThemeColors.primary.dark)
@@ -794,9 +785,14 @@ export const blueDarkTheme = createTheme({
                             .string(),
                         "&.MuiTableRow-hover:hover": {
                             backgroundColor: Color(ThemeColors.primary.dark)
-                                .mix(Color(MediumBlackBackground), 0.5)
                                 .alpha(0.2)
                                 .string(),
+                            "&.MuiTableRow-hover:hover": {
+                                backgroundColor: Color(ThemeColors.primary.dark)
+                                    .mix(Color(MediumBlackBackground), 0.5)
+                                    .alpha(0.2)
+                                    .string(),
+                            },
                         },
                     },
                 },
