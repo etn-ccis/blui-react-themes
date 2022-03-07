@@ -12,6 +12,7 @@ echo -e "${BLUE}Copying Package Resources${NC}"
 cp -r package.json ./dist/package.json
 cp -r README.md ./dist/README.md
 cp -r LICENSE ./dist/LICENSE
+cp -r LICENSES.json ./dist/LICENSES.json
 cp -r CHANGELOG.md ./dist/CHANGELOG.md
 
 echo -e "\r\n${GREEN}-----------------------------------"
