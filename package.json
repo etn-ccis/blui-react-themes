@@ -15,7 +15,8 @@
         "publish:package": "cd dist && set npm_config_yes=true && npx -p @brightlayer-ui/publish blui-publish",
         "tag:package": "npx -p @brightlayer-ui/tag blui-tag -s -blui-react-themes",
         "update:submodule": "git submodule update --remote",
-        "generate:licenses": "npm-license-crawler -onlyDirectDependencies -json LICENSES.json"
+        "generate:licenses": "npm-license-crawler -onlyDirectDependencies -json LICENSES.json",
+        "precommit": "yarn build && yarn generate:licenses && yarn test"
     },
     "repository": {
         "type": "git",
