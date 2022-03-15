@@ -268,6 +268,9 @@ export const blueDarkTheme = createTheme({
         // BUTTON GROUP OVERRIDES
         MuiButtonGroup: {
             styleOverrides: {
+                outlined: {
+                    color: BLUIColors.black[50],
+                },
                 contained: {
                     "&.MuiButtonGroup-grouped": {
                         "&:hover": {
@@ -276,6 +279,7 @@ export const blueDarkTheme = createTheme({
                     },
                 },
                 groupedText: {
+                    // color: Color(BLUIColors.black[200]).alpha(0.36).string(),
                     "&:not(:last-child).Mui-disabled": {
                         borderColor: ThemeColors.divider,
                     },
@@ -334,42 +338,36 @@ export const blueDarkTheme = createTheme({
                     "&:hover": {
                         backgroundColor: BLUIColors.black[400],
                     },
-                },
-                clickableColorPrimary: {
-                    "&:hover": {
-                        backgroundColor: BLUIColors.blue[300],
+                    "&.MuiChip-clickableColorPrimary": {
+                        "&:hover": {
+                            backgroundColor: BLUIColors.blue[300],
+                        },
                     },
-                },
-                clickableColorSecondary: {
-                    "&:hover": {
-                        backgroundColor: BLUIColors.lightBlue[300],
+                    "&.MuiChip-clickableColorSecondary": {
+                        "&:hover": {
+                            backgroundColor: BLUIColors.lightBlue[300],
+                        },
                     },
                 },
                 colorPrimary: {
                     color: WhiteText,
                     backgroundColor: ThemeColors.primary.dark,
-                    "&.MuiChip-clickable:hover": {
-                        backgroundColor: BLUIColors.blue[300],
-                    },
-                    "& .MuiChip-deleteIconColorPrimary": {
-                        color: BLUIColors.blue[100],
-                        "&:hover": {
-                            color: WhiteText,
-                        },
-                    },
+                    // "&:not(.MuiChip-outlinedPrimary).Mui-disabled": {
+                    //     opacity: 1,
+                    //     backgroundColor: Color(BLUIColors.black[200])
+                    //         .alpha(0.24)
+                    //         .string(),
+                    //     color: BLUIColors.black[400],
+                    // },
                 },
                 colorSecondary: {
                     color: WhiteText,
                     backgroundColor: ThemeColors.secondary.dark,
-                    "&.MuiChip-clickable:hover": {
-                        backgroundColor: BLUIColors.lightBlue[300],
-                    },
-                    "& .MuiChip-deleteIconColorPrimary": {
-                        color: BLUIColors.lightBlue[100],
-                        "&:hover": {
-                            color: WhiteText,
-                        },
-                    },
+                    // "&:not(.MuiChip-outlinedSecondary).Mui-disabled": {
+                    //     backgroundColor: ThemeColors.secondary.light,
+                    //     color: BLUIColors.lightBlue[200],
+                    //     opacity: 1,
+                    // },
                 },
                 deleteIcon: {
                     fontSize: "1.125rem",
@@ -380,17 +378,17 @@ export const blueDarkTheme = createTheme({
                     "&:hover": {
                         color: ThemeColors.text.primary,
                     },
-                },
-                deleteIconOutlinedColorPrimary: {
-                    color: BLUIColors.blue[400],
-                    "&:hover": {
-                        color: ThemeColors.primary.main,
+                    "&.MuiChip-deleteIconColorPrimary": {
+                        color: BLUIColors.blue[100],
+                        "&:hover": {
+                            color: WhiteText,
+                        },
                     },
-                },
-                deleteIconOutlinedColorSecondary: {
-                    color: BLUIColors.lightBlue[400],
-                    "&:hover": {
-                        color: ThemeColors.secondary.main,
+                    "&.MuiChip-deleteIconColorSecondary": {
+                        color: BLUIColors.lightBlue[100],
+                        "&:hover": {
+                            color: WhiteText,
+                        },
                     },
                 },
                 iconColorPrimary: {
@@ -425,40 +423,67 @@ export const blueDarkTheme = createTheme({
                     "& .MuiChip-deleteIcon": {
                         margin: `0px ${Spacing}px 0px -4px`,
                     },
-                    "&.Mui-disabled": {
-                        opacity: 1,
-                        borderColor: Color(BLUIColors.black[200])
+                    "&.Mui-disabled .MuiChip-deleteIcon": {
+                        color: "inherit",
+                    },
+                    "&.MuiChip-outlinedPrimary": {
+                        backgroundColor: Color(ThemeColors.primary.dark)
+                            .alpha(0.2)
+                            .string(),
+                        border: `1px solid ${ThemeColors.primary.dark}`,
+                        color: ThemeColors.primary.main,
+                        "&.MuiChip-clickable:hover": {
+                            backgroundColor: Color(ThemeColors.primary.dark)
+                                .alpha(0.3)
+                                .string(),
+                        },
+                        "& .MuiChip-deleteIconOutlinedColorPrimary": {
+                            color: BLUIColors.blue[400],
+                            "&:hover": {
+                                color: ThemeColors.primary.main,
+                            },
+                        },
+                        "&.Mui-disabled": {
+                            opacity: 1,
+                            borderColor: Color(BLUIColors.black[200])
+                                .alpha(0.36)
+                                .string(),
+                            backgroundColor: "transparent",
+                            color: BLUIColors.black[400],
+                            "& .MuiChip-deleteIconOutlinedColorPrimary": {
+                                color: 'inherit',
+                            }
+                        },
+                    },
+                    "&.MuiChip-outlinedSecondary": {
+                        backgroundColor: Color(ThemeColors.secondary.main)
+                            .alpha(0.2)
+                            .string(),
+                        border: `1px solid ${ThemeColors.secondary.main}`,
+                        color: ThemeColors.secondary.main,
+                        "&.MuiChip-clickable:hover": {
+                            backgroundColor: Color(ThemeColors.secondary.dark)
+                                .alpha(0.3)
+                                .string(),
+                        },
+                        "& .MuiChip-deleteIconOutlinedColorSecondary": {
+                            color: BLUIColors.lightBlue[400],
+                            "&:hover": {
+                                color: ThemeColors.secondary.main,
+                            },
+                        },
+                        "&.Mui-disabled": {
+                            opacity: 1,
+                            backgroundColor: ThemeColors.background.paper,
+                            color: ThemeColors.action.disabled,
+                            borderColor: Color(BLUIColors.black[200])
                             .alpha(0.36)
                             .string(),
-                        backgroundColor: "transparent",
-                        color: BLUIColors.black[400],
+                            "& .MuiChip-deleteIconOutlinedColorSecondary": {
+                                color: 'inherit',
+                            }
+                        },
                     },
-                },
-                outlinedPrimary: {
-                    backgroundColor: Color(ThemeColors.primary.dark)
-                        .alpha(0.2)
-                        .string(),
-                    "&.MuiChip-clickable:hover": {
-                        backgroundColor: Color(ThemeColors.primary.dark)
-                            .alpha(0.3)
-                            .string(),
-                    },
-                },
-                outlinedSecondary: {
-                    backgroundColor: Color(ThemeColors.secondary.dark)
-                        .alpha(0.2)
-                        .string(),
-                    "&.MuiChip-clickable:hover": {
-                        backgroundColor: Color(ThemeColors.secondary.dark)
-                            .alpha(0.3)
-                            .string(),
-                    },
-                },
-                icon: {
-                    fontSize: "1.125rem",
-                    color: ThemeColors.text.primary,
-                    marginLeft: Spacing,
-                    marginRight: -4,
                 },
             },
         },
@@ -511,7 +536,15 @@ export const blueDarkTheme = createTheme({
                 },
             },
         },
-
+        
+        //LIST Sub header OVERRIDES (User Menu)
+        MuiListSubheader: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: "transparent",
+                },
+            },
+        },
         // MOBILE STEPPER OVERRIDES
         MuiMobileStepper: {
             styleOverrides: {
@@ -629,6 +662,7 @@ export const blueDarkTheme = createTheme({
         },
 
         // STEPPER OVERRIDES
+        // STEPPER OVERRIDES
         MuiStepConnector: {
             styleOverrides: {
                 line: {
@@ -649,7 +683,7 @@ export const blueDarkTheme = createTheme({
                             right: "5%",
                             bottom: "5%",
                             left: "5%",
-                            backgroundColor: ThemeColors.background.paper,
+                            backgroundColor: BLUIColors.white[50],
                             borderRadius: "50%",
                         },
                     },
@@ -662,14 +696,27 @@ export const blueDarkTheme = createTheme({
                 root: {
                     zIndex: 1,
                     "&.Mui-active": {
+                        color: ThemeColors.primary.dark,
                         "& .MuiStepIcon-text": {
                             fill: WhiteText,
                             fontWeight: 600,
                         },
                     },
+                    "&.Mui-completed": {
+                        color: ThemeColors.primary.dark,
+                        "& .MuiStepIcon-text": {
+                            fill: WhiteText,
+                            fontWeight: 600,
+                        },
+                    },
+                    // "& .MuiStepIcon-text": {
+                    //     color: BLUIColors.black[300],
+                    //     fontWeight: 600,
+                    // },
                 },
                 text: {
-                    fill: ThemeColors.text.primary,
+                    color: ThemeColors.text.primary,
+                    fill: BLUIColors.black[300],
                 },
             },
         },
@@ -689,6 +736,8 @@ export const blueDarkTheme = createTheme({
                 },
                 iconContainer: {
                     position: "relative",
+                    paddingRight: 0,
+                    marginRight: Spacing,
                 },
             },
         },
@@ -762,13 +811,13 @@ export const blueDarkTheme = createTheme({
                 },
             },
         },
-        MuiTableHead: {
-            styleOverrides: {
-                root: {
-                    background: ThemeColors.background.paper,
-                },
-            },
-        },
+        // MuiTableHead: {
+        //     styleOverrides: {
+        //         root: {
+        //             background: ThemeColors.background.paper,
+        //         },
+        //     },
+        // },
 
         MuiTableRow: {
             styleOverrides: {

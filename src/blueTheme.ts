@@ -121,8 +121,6 @@ export const blueTheme = createTheme({
                         },
                     },
                 },
-                selected: {},
-                label: {},
             }
         },
 
@@ -243,46 +241,37 @@ export const blueTheme = createTheme({
                             .string(),
                     },
                 },
-                disabled: {},
-                disableElevation: {},
             },
         },
         // BUTTON GROUP OVERRIDES
         MuiButtonGroup: {
             styleOverrides: {
                 root: {
-                    "&:hover": {
-                        backgroundColor: Color(BLUIColors.black[500])
-                            .alpha(0.05)
-                            .string(),
-
-                    },
                     "&.Mui-disabled": {
                         border: `1px solid ${Color(BLUIColors.black[500])
                             .alpha(0.12)
                             .string()}`,
                     },
                 },
-                contained: {
-                    "&.MuiButtonGroup-grouped": {
+                groupedOutlinedHorizontal: {
+                    "&:not(:last-of-type)": {
                         "&:hover": {
-                            boxShadow: shadows[4],
+                            borderRightColor: 'transparent',
                         },
-                    },
-                },
-                groupedText: {
-                    "&:not(:last-child)": {
-                        borderColor: ThemeColors.divider,
                     },
                 },
                 groupedTextPrimary: {
                     "&:not(:last-child)": {
-                        borderColor: ThemeColors.divider,
+                        "&.Mui-disabled": {
+                            borderColor: ThemeColors.divider,
+                        },
                     },
                 },
                 groupedTextSecondary: {
                     "&:not(:last-child)": {
-                        borderColor: ThemeColors.divider,
+                        "&.Mui-disabled": {
+                            borderColor: ThemeColors.divider,
+                        },
                     },
                 },
             },
@@ -335,15 +324,15 @@ export const blueTheme = createTheme({
                     "&:hover": {
                         backgroundColor: BLUIColors.gray[100],
                     },
-                },
-                clickableColorPrimary: {
-                    "&:hover": {
-                        backgroundColor: BLUIColors.blue[300],
+                    "&.MuiChip-clickableColorPrimary": {
+                        "&:hover": {
+                            backgroundColor: BLUIColors.blue[300],
+                        },
                     },
-                },
-                clickableColorSecondary: {
-                    "&:hover": {
-                        backgroundColor: BLUIColors.lightBlue[300],
+                    "&.MuiChip-clickableColorSecondary": {
+                        "&:hover": {
+                            backgroundColor: BLUIColors.lightBlue[300],
+                        },
                     },
                 },
                 colorPrimary: {
@@ -373,27 +362,17 @@ export const blueTheme = createTheme({
                     "&:hover": {
                         color: ThemeColors.text.primary,
                     },
-                },
-                deleteIconColorPrimary: {
-                    color: BLUIColors.blue[100],
-                    "&:hover": {
-                        color: WhiteText,
+                    "&.MuiChip-deleteIconColorPrimary": {
+                        color: BLUIColors.blue[100],
+                        "&:hover": {
+                            color: WhiteText,
+                        },
                     },
-                },
-                deleteIconColorSecondary: {
-                    color: BLUIColors.lightBlue[100],
-                    "&:hover": {
-                        color: WhiteText,
-                    },
-                },
-                deleteIconOutlinedColorPrimary: {
-                    "&:hover": {
-                        color: ThemeColors.primary.main,
-                    },
-                },
-                deleteIconOutlinedColorSecondary: {
-                    "&:hover": {
-                        color: ThemeColors.secondary.main,
+                    "&.MuiChip-deleteIconColorSecondary": {
+                        color: BLUIColors.lightBlue[100],
+                        "&:hover": {
+                            color: WhiteText,
+                        },
                     },
                 },
                 iconColorPrimary: {
@@ -430,41 +409,51 @@ export const blueTheme = createTheme({
                     "&.Mui-disabled .MuiChip-deleteIcon": {
                         color: "inherit",
                     },
-                },
-                outlinedPrimary: {
-                    backgroundColor: Color(ThemeColors.primary.main)
-                        .alpha(0.05)
-                        .string(),
-                    border: `1px solid ${ThemeColors.primary.main}`,
-                    color: ThemeColors.primary.main,
-                    "&.MuiChip-clickable:hover": {
+                    "&.MuiChip-outlinedPrimary": {
                         backgroundColor: Color(ThemeColors.primary.main)
-                            .alpha(0.1)
+                            .alpha(0.05)
                             .string(),
+                        border: `1px solid ${ThemeColors.primary.main}`,
+                        color: ThemeColors.primary.main,
+                        "&.MuiChip-clickable:hover": {
+                            backgroundColor: Color(ThemeColors.primary.main)
+                                .alpha(0.1)
+                                .string(),
+                        },
+                        "&.Mui-disabled": {
+                            opacity: 1,
+                            backgroundColor: ThemeColors.background.paper,
+                            color: ThemeColors.action.disabled,
+                            borderColor: Color(BlackBorder).alpha(0.12).string(),
+                        },
+                        "& .MuiChip-deleteIconOutlinedColorPrimary": {
+                            "&:hover": {
+                                color: ThemeColors.primary.main,
+                            },
+                        },
                     },
-                    "&.Mui-disabled": {
-                        opacity: 1,
-                        backgroundColor: ThemeColors.background.paper,
-                        color: ThemeColors.action.disabled,
-                        borderColor: Color(BlackBorder).alpha(0.12).string(),
-                    },
-                },
-                outlinedSecondary: {
-                    backgroundColor: Color(ThemeColors.secondary.main)
-                        .alpha(0.05)
-                        .string(),
-                    border: `1px solid ${ThemeColors.secondary.main}`,
-                    color: ThemeColors.secondary.main,
-                    "&.MuiChip-clickable:hover": {
+                    "&.MuiChip-outlinedSecondary": {
                         backgroundColor: Color(ThemeColors.secondary.main)
-                            .alpha(0.1)
+                            .alpha(0.05)
                             .string(),
-                    },
-                    "&.Mui-disabled": {
-                        opacity: 1,
-                        backgroundColor: ThemeColors.background.paper,
-                        color: ThemeColors.action.disabled,
-                        borderColor: Color(BlackBorder).alpha(0.12).string(),
+                        border: `1px solid ${ThemeColors.secondary.main}`,
+                        color: ThemeColors.secondary.main,
+                        "&.MuiChip-clickable:hover": {
+                            backgroundColor: Color(ThemeColors.secondary.main)
+                                .alpha(0.1)
+                                .string(),
+                        },
+                        "&.Mui-disabled": {
+                            opacity: 1,
+                            backgroundColor: ThemeColors.background.paper,
+                            color: ThemeColors.action.disabled,
+                            borderColor: Color(BlackBorder).alpha(0.12).string(),
+                        },
+                        "& .MuiChip-deleteIconOutlinedColorSecondary": {
+                            "&:hover": {
+                                color: ThemeColors.secondary.main,
+                            },
+                        },
                     },
                 },
                 icon: {
@@ -510,7 +499,6 @@ export const blueTheme = createTheme({
                         backgroundColor: BLUIColors.lightBlue[300],
                     },
                 },
-                disabled: {},
             },
         },
 
