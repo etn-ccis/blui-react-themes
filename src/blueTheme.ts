@@ -826,7 +826,7 @@ export const blueTheme = createTheme({
                         opacity: 1,
                     },
                     "&:-webkit-autofill": {
-                        "-webkit-box-shadow": `0 0 0 30px ${BLUIColors.white[50]} inset`,
+                        WebkitBoxShadow: `0 0 0 30px ${BLUIColors.white[50]} inset`,
                     },
                 },
             },
@@ -877,7 +877,7 @@ export const blueTheme = createTheme({
                 },
                 input: {
                     "&:-webkit-autofill": {
-                        "-webkit-box-shadow": `0 0 0 30px ${ThemeColors.background.default} inset`,
+                        WebkitBoxShadow: `0 0 0 30px ${ThemeColors.background.default} inset`,
                     },
                 },
                 underline: {
@@ -900,9 +900,6 @@ export const blueTheme = createTheme({
                 root: {
                     "& .MuiOutlinedInput-notchedOutline": {
                         borderColor: ThemeColors.divider,
-                    },
-                    "&:hover .MuiOutlinedInput-notchedOutline": {
-                        borderColor: BLUIColors.gray[500],
                     },
                     "&.Mui-error.MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline": {
                         borderColor: ThemeColors.error.main,

@@ -51,7 +51,6 @@ const WhiteText = BLUIColors.white[50];
 const MediumBlackBackground = BLUIColors.black[500];
 const BlackText = BLUIColors.black[500];
 const Spacing = 8;
-// const BlackBorder = BLUIColors.black[500];
 
 /*
     Refer to https://mui.com/customization/default-theme/ for a list of properties that are available
@@ -265,6 +264,17 @@ export const blueDarkTheme = createTheme({
             },
         },
 
+        // BUTTON BASE OVERRIDES
+        MuiButtonBase: {
+            styleOverrides: {
+                root: {
+                    "&.MuiPickersDay-root": {
+                        backgroundColor: 'transparent',
+                    }
+                }
+            },
+        },
+
         // BUTTON GROUP OVERRIDES
         MuiButtonGroup: {
             styleOverrides: {
@@ -279,7 +289,6 @@ export const blueDarkTheme = createTheme({
                     },
                 },
                 groupedText: {
-                    // color: Color(BLUIColors.black[200]).alpha(0.36).string(),
                     "&:not(:last-child).Mui-disabled": {
                         borderColor: ThemeColors.divider,
                     },
@@ -352,22 +361,10 @@ export const blueDarkTheme = createTheme({
                 colorPrimary: {
                     color: WhiteText,
                     backgroundColor: ThemeColors.primary.dark,
-                    // "&:not(.MuiChip-outlinedPrimary).Mui-disabled": {
-                    //     opacity: 1,
-                    //     backgroundColor: Color(BLUIColors.black[200])
-                    //         .alpha(0.24)
-                    //         .string(),
-                    //     color: BLUIColors.black[400],
-                    // },
                 },
                 colorSecondary: {
                     color: WhiteText,
                     backgroundColor: ThemeColors.secondary.dark,
-                    // "&:not(.MuiChip-outlinedSecondary).Mui-disabled": {
-                    //     backgroundColor: ThemeColors.secondary.light,
-                    //     color: BLUIColors.lightBlue[200],
-                    //     opacity: 1,
-                    // },
                 },
                 deleteIcon: {
                     fontSize: "1.125rem",
@@ -662,7 +659,6 @@ export const blueDarkTheme = createTheme({
         },
 
         // STEPPER OVERRIDES
-        // STEPPER OVERRIDES
         MuiStepConnector: {
             styleOverrides: {
                 line: {
@@ -709,10 +705,6 @@ export const blueDarkTheme = createTheme({
                             fontWeight: 600,
                         },
                     },
-                    // "& .MuiStepIcon-text": {
-                    //     color: BLUIColors.black[300],
-                    //     fontWeight: 600,
-                    // },
                 },
                 text: {
                     color: ThemeColors.text.primary,
@@ -811,13 +803,6 @@ export const blueDarkTheme = createTheme({
                 },
             },
         },
-        // MuiTableHead: {
-        //     styleOverrides: {
-        //         root: {
-        //             background: ThemeColors.background.paper,
-        //         },
-        //     },
-        // },
 
         MuiTableRow: {
             styleOverrides: {
@@ -919,8 +904,8 @@ export const blueDarkTheme = createTheme({
                         opacity: 0.36,
                     },
                     "&:-webkit-autofill": {
-                        "-webkit-box-shadow": `0 0 0 100px ${ThemeColors.background.paper} inset`,
-                        "-webkit-text-fill-color": ThemeColors.text.primary,
+                        WebkitBoxShadow: `0 0 0 100px ${ThemeColors.background.paper} inset`,
+                        WebkitTextFillColor: ThemeColors.text.primary,
                     },
                 },
             },
@@ -980,7 +965,7 @@ export const blueDarkTheme = createTheme({
                 },
                 input: {
                     "&:-webkit-autofill": {
-                        "-webkit-box-shadow": `0 0 0 100px ${BLUIColors.black[800]} inset`,
+                        WebkitBoxShadow: `0 0 0 100px ${BLUIColors.black[800]} inset`,
                     },
                 },
                 underline: {
@@ -1019,25 +1004,25 @@ export const blueDarkTheme = createTheme({
                     "&.Mui-disabled .MuiOutlinedInput-notchedOutline": {
                         borderColor: ThemeColors.divider,
                     },
-                    "&:hover .MuiOutlinedInput-notchedOutline": {
-                        borderColor: BLUIColors.black[200],
-                    },
                     "&.Mui-error.MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline": {
                         borderColor: ThemeColors.error.dark,
                     },
                     "&.Mui-error:hover:not(.Mui-focused) .MuiOutlinedInput-notchedOutline": {
                         borderColor: ThemeColors.error.main,
                     },
-                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: ThemeColors.primary.dark,
+                    "&.MuiInputBase-colorPrimary.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                        borderColor: BLUIColors.blue[500],
                     },
-                    "&.MuiOutlinedInput-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                        borderColor: ThemeColors.secondary.dark,
+                    "&.MuiInputBase-colorSecondary.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                        borderColor: BLUIColors.lightBlue[500],
+                    },
+                    "&.Mui-focused.Mui-error .MuiOutlinedInput-notchedOutline": {
+                        borderColor: ThemeColors.error.dark,
                     },
                 },
                 input: {
                     "&:-webkit-autofill": {
-                        "-webkit-box-shadow": `0 0 0 100px ${BLUIColors.black[900]} inset`,
+                        WebkitBoxShadow: `0 0 0 100px ${BLUIColors.black[900]} inset`,
                     },
                 },
                 notchedOutline: {
