@@ -1,5 +1,7 @@
 # Changelog
-
+## v7.0.0 (Not yet published)
+### Changed
+-   Migration from Material UI v4 to v5. [#30](https://github.com/brightlayer-ui/react-themes/issues/30)
 ## v6.1.1 (February 9, 2022)
 
 ### Fixed
