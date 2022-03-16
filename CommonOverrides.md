@@ -11,12 +11,12 @@ If you want to override a single table:
 ```ts
 import Color from 'color';
 import * as BLUIColors from '@brightlayer-ui/colors';
-import { Table, TableRow }  from '@material-ui/core';
-import { makeStyles } from "@material-ui/core/styles";
-import { Theme } from '@material-ui/core/styles/createMuiTheme';
+import Table from "@mui/material/Table";
+import TableRow from "@mui/material/TableRow";
+import makeStyles from '@material-ui/core/styles/makeStyles';
 
 ...
-const useStyles = () => makestyles ((theme: Theme) => {
+const useStyles = () => makeStyles ((theme: Theme) => {
     tableRow: {
         backgroundColor: BLUIColors.white[100],
         "&:hover": {
@@ -46,36 +46,36 @@ If you want to change the theme to do this for all tables, you can override the 
 ```ts
 import * as BluiTheme from '@brightlayer-ui/react-themes';
 import * as BLUIColors from '@brightlayer-ui/colors';
-import ThemeProvider from '@material-ui/styles/ThemeProvider';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Color from 'color';
 
 ...
 
 <ThemeProvider
-        theme={createMuiTheme(
+        theme={createTheme(
             Object.assign({}, BluiTheme.blue, {
-                overrides: {
-                    MuiTableRow: {
-                        root: {
-                            backgroundColor: BLUIColors.white[100],
-                            '&:hover': {
-                                backgroundColor: Color(BLUIColors.white[100])
-                                    .mix(Color(BLUIColors.black[50]), 0.5)
-                                    .string(),
-                            },
-                            '&:nth-of-type(odd)': {
-                                backgroundColor: BLUIColors.white[50],
-                                '&:hover': {
-                                    backgroundColor: Color(BLUIColors.white[50])
-                                        .mix(Color(BLUIColors.black[50]), 0.5)
-                                        .string(),
-                                },
-                            },
+              components: {
+                MuiTableRow: {
+                  styleOverrides: {
+                      root: {
+                        backgroundColor: BLUIColors.white[100],
+                        "&:hover": {
+                          backgroundColor: Color(BLUIColors.white[100])
+                            .mix(Color(BLUIColors.black[50]), 0.5)
+                            .string()
                         },
-                        hover: {},
-                    },
-                },
+                        "&:nth-of-type(odd)": {
+                          backgroundColor: BLUIColors.black[900],
+                          "&:hover": {
+                            backgroundColor: Color(BLUIColors.black[900])
+                              .mix(Color(BLUIColors.black[50]), 0.5)
+                              .string()
+                          },
+                        },
+                      },
+                  },
+              },
+              },
             })
         )}
     >

@@ -13,7 +13,6 @@ import {
 } from "./shared";
 import * as BLUIColors from "@brightlayer-ui/colors";
 import Color from "color";
-import shadows from '@mui/material/styles/shadows';
 
 /*
     Variable color definitions so we can reuse them in the theme overrides below

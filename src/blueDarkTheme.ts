@@ -13,7 +13,6 @@ import {
 } from "./shared";
 import * as BLUIColors from "@brightlayer-ui/colors";
 import Color from "color";
-import shadows from '@mui/material/styles/shadows';
 
 /* 
     Variable color definitions so we can reuse them in the theme overrides below
@@ -280,13 +279,6 @@ export const blueDarkTheme = createTheme({
             styleOverrides: {
                 outlined: {
                     color: BLUIColors.black[50],
-                },
-                contained: {
-                    "&.MuiButtonGroup-grouped": {
-                        "&:hover": {
-                            boxShadow: shadows[4],
-                        },
-                    },
                 },
                 groupedText: {
                     "&:not(:last-child).Mui-disabled": {
