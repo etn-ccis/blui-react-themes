@@ -790,6 +790,9 @@ export const blueDarkTheme = createTheme({
         // TABLE OVERRIDES
         MuiTableCell: {
             styleOverrides: {
+                root: {
+                    borderBottom: `1px solid ${ThemeColors.divider}`,
+                },
                 head: {
                     fontWeight: 600,
                 },
