@@ -416,7 +416,9 @@ export const blueDarkTheme = createTheme({
                         color: "inherit",
                     },
                     "&.MuiChip-outlinedPrimary": {
-                        backgroundColor: 'transparent',
+                        backgroundColor: Color(ThemeColors.primary.dark)
+                            .alpha(0.2)
+                            .string(),
                         border: `1px solid ${Color(ThemeColors.primary.dark)
                             .alpha(0.2)
                             .string()}`,
