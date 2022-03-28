@@ -13,7 +13,7 @@ import Color from 'color';
 import * as BLUIColors from '@brightlayer-ui/colors';
 import Table from "@mui/material/Table";
 import TableRow from "@mui/material/TableRow";
-import makeStyles from '@material-ui/core/styles/makeStyles';
+import makeStyles from '@mui/styles/makeStyles';
 
 ...
 const useStyles = () => makeStyles ((theme: Theme) => {
