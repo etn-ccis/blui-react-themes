@@ -28,11 +28,11 @@ yarn add @brightlayer-ui/react-themes
 To use these themes in your application, simply wrap the app in a `ThemeProvider` and pass in your desired theme (`blue` or `blueDark`). You'll also need to include the Open Sans font resources (included with the themes):
 
 ```tsx
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 import * as BLUIThemes from '@brightlayer-ui/react-themes';
 import "@brightlayer-ui/react-themes/open-sans";
 ...
-<ThemeProvider theme={createTheme(BLUIThemes.blue)}>
+<ThemeProvider theme={BLUIThemes.blue}>
     <App />
 </ThemeProvider>
 ```
