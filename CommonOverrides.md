@@ -52,32 +52,32 @@ import Color from 'color';
 ...
 
 <ThemeProvider
-        theme={createTheme(
-            Object.assign({}, BluiTheme.blue, {
-              components: {
-                MuiTableRow: {
-                  styleOverrides: {
-                      root: {
-                        backgroundColor: BLUIColors.white[100],
-                        "&:hover": {
-                          backgroundColor: Color(BLUIColors.white[100])
-                            .mix(Color(BLUIColors.black[50]), 0.5)
-                            .string()
-                        },
-                        "&:nth-of-type(odd)": {
-                          backgroundColor: BLUIColors.black[900],
-                          "&:hover": {
-                            backgroundColor: Color(BLUIColors.black[900])
-                              .mix(Color(BLUIColors.black[50]), 0.5)
-                              .string()
-                          },
-                        },
-                      },
-                  },
-              },
-              },
-            })
-        )}
+        theme={
+          Object.assign({}, BluiTheme.blue, {
+            components: {
+              MuiTableRow: {
+                styleOverrides: {
+                  root: {
+                    backgroundColor: BLUIColors.white[100],
+                    "&:hover": {
+                      backgroundColor: Color(BLUIColors.white[100])
+                        .mix(Color(BLUIColors.black[50]), 0.5)
+                        .string()
+                    },
+                    "&:nth-of-type(odd)": {
+                      backgroundColor: BLUIColors.black[900],
+                      "&:hover": {
+                        backgroundColor: Color(BLUIColors.black[900])
+                          .mix(Color(BLUIColors.black[50]), 0.5)
+                          .string()
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          })
+        }
     >
     {/* Your table contents */}
 </ThemeProvider>
