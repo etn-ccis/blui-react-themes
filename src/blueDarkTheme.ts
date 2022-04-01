@@ -632,7 +632,10 @@ export const blueDarkTheme = createTheme({
                     backgroundColor: ThemeColors.primary.dark,
                 },
                 valueLabel: {
-                    backgroundColor: ThemeColors.primary.dark,
+                    backgroundColor: BLUIColors.blue[300],
+                    color: Color(BLUIColors.darkBlack[900])
+                    .alpha(0.87)
+                    .string(),
                 }
             }
         },
