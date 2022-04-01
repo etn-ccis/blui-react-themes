@@ -1,5 +1,11 @@
 # Changelog
 
+## v7.0.0 (April 1, 2022)
+
+### Changed
+
+-   Updated theme structures to support Material UI version v5 ([#30](https://github.com/brightlayer-ui/react-themes/issues/30)).
+
 ## v6.1.1 (February 9, 2022)
 
 ### Fixed
@@ -14,6 +20,7 @@
 -   Updated `<Table>` styles ([#16](https://github.com/brightlayer-ui/react-themes/issues/16)).
 
 ### Added
+
 -   Added `CommonOverrides.md` for documentation and examples ([#16](https://github.com/brightlayer-ui/react-themes/issues/16)).
 
 ## v6.1.0 (November 8, 2021)

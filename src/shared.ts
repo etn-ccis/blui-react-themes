@@ -7,7 +7,7 @@ This code is licensed under the BSD-3 license found in the LICENSE file in the r
 **/
 
 import { BLUIColor } from '@brightlayer-ui/types';
-import { SimplePaletteColorOptions } from '@material-ui/core';
+import { SimplePaletteColorOptions } from '@mui/material';
 
 export const typography = {
     fontFamily: '"Open Sans", Helvetica, Roboto, sans-serif',
@@ -41,6 +41,7 @@ export const typography = {
         lineHeight: '1.67',
     },
 };
+
 export const createSimpleLightPalette = (color: BLUIColor): SimplePaletteColorOptions => ({
     light: color[50],
     main: color[500],
