@@ -5,13 +5,13 @@
         "licenseUrl": "https://github.com/brightlayer-ui/colors/raw/master/LICENSE",
         "parents": "@brightlayer-ui/react-themes"
     },
-    "@fontsource/open-sans@4.2.2": {
+    "@fontsource/open-sans@4.5.5": {
         "licenses": "MIT",
         "repository": "https://github.com/fontsource/fontsource",
-        "licenseUrl": "https://github.com/fontsource/fontsource/raw/master/LICENSE",
+        "licenseUrl": "https://github.com/fontsource/fontsource",
         "parents": "@brightlayer-ui/react-themes"
     },
-    "color@3.1.3": {
+    "color@3.2.1": {
         "licenses": "MIT",
         "repository": "https://github.com/Qix-/color",
         "licenseUrl": "https://github.com/Qix-/color/raw/master/LICENSE",
