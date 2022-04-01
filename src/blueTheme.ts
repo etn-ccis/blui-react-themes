@@ -562,8 +562,11 @@ export const blueTheme = createTheme({
                     backgroundColor: BLUIColors.blue[200],
                 },
                 valueLabel: {
-                    backgroundColor: BLUIColors.blue[200],
-                }
+                    backgroundColor: BLUIColors.blue[300],
+                },
+                colorSecondary: {
+                    color: ThemeColors.secondary.main,
+                },
             },
         },
 
