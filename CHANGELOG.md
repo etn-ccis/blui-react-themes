@@ -1,5 +1,11 @@
 # Changelog
 
+## v7.1.0 (unreleased)
+
+### Updated
+
+-   Remove dependency on @mui/styles. [#47](https://github.com/brightlayer-ui/react-themes/issues/47)
+
 ## v7.0.0 (April 1, 2022)
 
 ### Changed
