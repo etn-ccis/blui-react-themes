@@ -13,31 +13,27 @@ import Color from 'color';
 import * as BLUIColors from '@brightlayer-ui/colors';
 import Table from "@mui/material/Table";
 import TableRow from "@mui/material/TableRow";
-import makeStyles from '@mui/styles/makeStyles';
+import { styled } from '@mui/material/styles';
 
 ...
-const useStyles = () => makeStyles ((theme: Theme) => {
-    tableRow: {
-        backgroundColor: BLUIColors.white[100],
-        "&:hover": {
-            backgroundColor: Color(BLUIColors.white[100]).mix(Color(BLUIColors.black[50]), 0.5).string()
-        },
-        "&:nth-of-type(odd)": {
-            backgroundColor: BLUIColors.white[50],
-            "&:hover": {
-                backgroundColor: Color(BLUIColors.white[50]).mix(Color(BLUIColors.black[50]), 0.5).string()
-            }
-        }
+const StyledTableRow = styled(TableRow)(({ theme }) => ({
+    backgroundColor: BLUIColors.white[100],
+    "&:hover": {
+      backgroundColor: Color(BLUIColors.white[100]).mix(Color(BLUIColors.black[50]), 0.5).string()
+    },
+    "&:nth-of-type(odd)": {
+      backgroundColor: BLUIColors.white[50],
+      "&:hover": {
+        backgroundColor: Color(BLUIColors.white[50]).mix(Color(BLUIColors.black[50]), 0.5).string()
+      }
     }
-})
-
-const classes = useStyles();
+}));
 ...
 
 <Table>
-    <TableRow classes={{ root: classes.tableRow }}> 
+    <StyledTableRow>
         {/* Table row contents */}
-    </TableRow>
+    </StyledTableRow>
 </Table>
 ```
 
