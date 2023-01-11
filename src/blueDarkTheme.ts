@@ -169,6 +169,11 @@ export const blueDarkTheme = createTheme({
                         backgroundColor: BLUIColors.black[400],
                     },
                 },
+                iconSizeMedium: {
+                    "& > *:nth-of-type(1)": {                  
+                      fontSize: "1.125rem",
+                  },
+                },
                 outlined: {
                     borderColor: BLUIColors.black[200],
                     "&:hover": {

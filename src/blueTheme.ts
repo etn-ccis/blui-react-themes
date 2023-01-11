@@ -131,7 +131,7 @@ export const blueTheme = createTheme({
                 },
                 iconSizeMedium: {
                     "& > *:nth-of-type(1)": {                  
-                      fontSize: 18,
+                      fontSize: "1.125rem",
                   },
                 },
                 contained: {
