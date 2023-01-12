@@ -2,7 +2,7 @@
 
 ## v7.2.0 (not released)
 
-### updated
+### Updated
 
 - Update themes to use fontSize 1.125rem for startIcons and endIcons in buttons ([#24](https://github.com/etn-ccis/blui-react-themes/issues/24)).
 
