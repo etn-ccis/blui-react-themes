@@ -114,6 +114,9 @@ export const blueDarkTheme = createTheme({
                         .alpha(0.7)
                         .string(),
                 },
+                invisible: {
+                    backgroundColor: 'transparent',
+                },
             },
         },
 
