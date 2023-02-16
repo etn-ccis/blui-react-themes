@@ -6,7 +6,7 @@
 
 -  Update themes to use fontSize 1.125rem for startIcons and endIcons in buttons ([#24](https://github.com/etn-ccis/blui-react-themes/issues/24)).
 
--  Update dark theme MuiBackdrop style override to include invisible transparent for menu ([#46](https://github.com/etn-ccis/blui-react-themes/issues/46)).
+-  Update dark theme MuiBackdrop style override to render the backgroundColor as 'transparent' when the invisible class is applied ([#46](https://github.com/etn-ccis/blui-react-themes/issues/46)).
 
 ## v7.1.0 (November 30, 2022)
 
