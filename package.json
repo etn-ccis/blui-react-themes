@@ -34,7 +34,7 @@
     ],
     "dependencies": {
         "@brightlayer-ui/colors": "^3.0.0",
-        "@fontsource/open-sans": "^4.2.2",
+        "@fontsource/open-sans": "^5.0.3",
         "color": "^4.2.3"
     },
     "peerDependencies": {
