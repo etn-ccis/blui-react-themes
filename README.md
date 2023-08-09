@@ -1,4 +1,4 @@
-# Brightlayer UI themes for React applications
+# Test Brightlayer UI themes for React applications
 
 [![](https://img.shields.io/circleci/project/github/etn-ccis/blui-react-themes/master.svg?style=flat)](https://circleci.com/gh/etn-ccis/blui-react-themes/tree/master)
 [![](https://img.shields.io/npm/v/@brightlayer-ui/react-themes.svg?label=@brightlayer-ui/react-themes&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/react-themes)
