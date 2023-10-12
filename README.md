@@ -10,6 +10,35 @@ For other frameworks, check out our related packages:
 -   [@brightlayer-ui/angular-themes](https://www.npmjs.com/package/@brightlayer-ui/angular-themes)
 -   [@brightlayer-ui/react-native-themes](https://www.npmjs.com/package/@brightlayer-ui/react-native-themes)
 
+## Installation
+
+Install with npm
+
+```shell
+npm install --save @brightlayer-ui/react-themes
+```
+
+or yarn
+
+```shell
+yarn add @brightlayer-ui/react-themes
+```
+
+# Usage
+
+To use these themes in your application, simply wrap the app in a `ThemeProvider` and pass in your desired theme (`blue` or `blueDark`). You'll also need to include the Open Sans font resources (included with the themes):
+
+```tsx
+import { ThemeProvider } from '@mui/material/styles';
+import * as BLUIThemes from '@brightlayer-ui/react-themes';
+import "@brightlayer-ui/react-themes/open-sans";
+...
+<ThemeProvider theme={BLUIThemes.blue}>
+    <App />
+</ThemeProvider>
+```
+
+
 ## Usage
 
 Read about the usage details at [our developer documentation site](https://brightlayer-ui-components.github.io/react/themes/overview).
