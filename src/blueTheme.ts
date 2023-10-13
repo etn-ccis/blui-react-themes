@@ -129,6 +129,11 @@ export const blueTheme = createTheme({
                 root: {
                     textTransform: "none",
                 },
+                iconSizeMedium: {
+                    "& > *:nth-of-type(1)": {                  
+                      fontSize: "1.125rem",
+                  },
+                },
                 contained: {
                     backgroundColor: ThemeColors.background.paper,
                     color: ThemeColors.text.primary,

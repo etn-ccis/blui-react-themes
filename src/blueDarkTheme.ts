@@ -114,6 +114,9 @@ export const blueDarkTheme = createTheme({
                         .alpha(0.7)
                         .string(),
                 },
+                invisible: {
+                    backgroundColor: 'transparent',
+                },
             },
         },
 
@@ -168,6 +171,11 @@ export const blueDarkTheme = createTheme({
                     "&:hover": {
                         backgroundColor: BLUIColors.black[400],
                     },
+                },
+                iconSizeMedium: {
+                    "& > *:nth-of-type(1)": {                  
+                      fontSize: "1.125rem",
+                  },
                 },
                 outlined: {
                     borderColor: BLUIColors.black[200],

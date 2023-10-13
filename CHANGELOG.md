@@ -1,33 +1,41 @@
 # Changelog
 
+## v7.2.0 (October 12, 2023)
+
+### Updated
+
+-  Update themes to use fontSize 1.125rem for startIcons and endIcons in buttons ([#24](https://github.com/etn-ccis/blui-react-themes/issues/24)).
+
+-  Update dark theme MuiBackdrop style override to render the backgroundColor as 'transparent' when the invisible class is applied ([#46](https://github.com/etn-ccis/blui-react-themes/issues/46)).
+
 ## v7.1.0 (November 30, 2022)
 
 ### Updated
 
--   Remove dependency on @mui/styles ([#47](https://github.com/brightlayer-ui/react-themes/issues/47)).
+-   Remove dependency on @mui/styles ([#47](https://github.com/etn-ccis/blui-react-themes/issues/47)).
 
 ## v7.0.0 (April 1, 2022)
 
 ### Changed
 
--   Updated theme structures to support Material UI version v5 ([#30](https://github.com/brightlayer-ui/react-themes/issues/30)).
+-   Updated theme structures to support Material UI version v5 ([#30](https://github.com/etn-ccis/blui-react-themes/issues/30)).
 
 ## v6.1.1 (February 9, 2022)
 
 ### Fixed
 
--   Fix light theme to use black 500 for divider. ([#17](https://github.com/brightlayer-ui/react-themes/issues/17)).
--   Fixed MUI `<Input>` `filled` variant's background color when focused on mobile devices ([#2](https://github.com/brightlayer-ui/react-themes/issues/2)).
+-   Fix light theme to use black 500 for divider. ([#17](https://github.com/etn-ccis/blui-react-themes/issues/17)).
+-   Fixed MUI `<Input>` `filled` variant's background color when focused on mobile devices ([#2](https://github.com/etn-ccis/blui-react-themes/issues/2)).
 
 ### Changed
 
--   Updated MUI `<Tooltip>` font size to .75rem ([#8](https://github.com/brightlayer-ui/react-themes/issues/8)).
--   Updated `<TableSortLabel>` styles ([#11](https://github.com/brightlayer-ui/react-themes/issues/11)).
--   Updated `<Table>` styles ([#16](https://github.com/brightlayer-ui/react-themes/issues/16)).
+-   Updated MUI `<Tooltip>` font size to .75rem ([#8](https://github.com/etn-ccis/blui-react-themes/issues/8)).
+-   Updated `<TableSortLabel>` styles ([#11](https://github.com/etn-ccis/blui-react-themes/issues/11)).
+-   Updated `<Table>` styles ([#16](https://github.com/etn-ccis/blui-react-themes/issues/16)).
 
 ### Added
 
--   Added `CommonOverrides.md` for documentation and examples ([#16](https://github.com/brightlayer-ui/react-themes/issues/16)).
+-   Added `CommonOverrides.md` for documentation and examples ([#16](https://github.com/etn-ccis/blui-react-themes/issues/16)).
 
 ## v6.1.0 (November 8, 2021)
 
