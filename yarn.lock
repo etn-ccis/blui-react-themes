@@ -60,9 +60,9 @@
   integrity sha512-AHPmaAx+RYfZz0eYu6Gviiagpmiyw98ySSlQvCUhVGDRtDFe4DBS0x1bSjdF3gqUDYOczB+yYvBTtEylYSdRhg==
 
 "@fontsource/open-sans@^5.0.3":
-  version "5.0.20"
-  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.0.20.tgz#28008fd7f63074707bf4b08929c81dd534a5f53a"
-  integrity sha512-Tgdqmp9QX8YZd5TO+rEv5n5cZkTaDf0I0eHUHMe3xKxUgGR/9uKS7VYL+kiVZfMNZ/8EyMLwzcNFWVsNG6nZAg==
+  version "5.0.22"
+  resolved "https://registry.yarnpkg.com/@fontsource/open-sans/-/open-sans-5.0.22.tgz#ff5d4de6301e58a1da79acfc838eca71a631f663"
+  integrity sha512-lN3A4prlcVPgLjlgwY+oMPalpyXPM/6DwaLr6LjqkjytjGIZTLBbInL+zTfcemSyMtTQklreETepGjjmtzlRHA==
 
 "@mui/base@5.0.0-alpha.127":
   version "5.0.0-alpha.127"
