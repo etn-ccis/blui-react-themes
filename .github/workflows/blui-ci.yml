@@ -16,7 +16,7 @@ permissions:
   contents: read
 
 jobs:
-  build_theme:
+  build_theme_verify_artifacts:
     runs-on: ubuntu-latest
 
     strategy:
@@ -40,27 +40,10 @@ jobs:
         path: dist
     - run: yarn test
 
-  # test_verify_artifacts:
-  #   runs-on: ubuntu-latest
-      
-  #   strategy:
-  #     matrix:
-  #       node-version: [18.x]
-      
-  #   steps:
-  #   - uses: actions/checkout@v4
-  #   - name: Use Node.js ${{ matrix.node-version }}
-  #     uses: actions/setup-node@v4
-  #     with:
-  #       node-version: ${{ matrix.node-version }}
-  #       cache: 'yarn'
-  #   - run: yarn --frozen-lockfile
-  #   - run: yarn test
-
   publish_react_theme:
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'push' && (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev') }}
-    needs: [build_theme]
+    needs: build_theme_verify_artifacts
     strategy:
       matrix:
         node-version: [18.x]
