@@ -38,7 +38,6 @@ import "@brightlayer-ui/react-themes/open-sans";
 </ThemeProvider>
 ```
 
-
 ## Usage
 
 Read about the usage details at [our developer documentation site](https://brightlayer-ui-components.github.io/react/themes/overview).
