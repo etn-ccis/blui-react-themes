@@ -7,6 +7,4 @@ This code is licensed under the BSD-3 license found in the LICENSE file in the r
 **/
 import type {} from '@mui/material/themeCssVarsAugmentation'
 
-export { blueDarkTheme as blueDark } from './blueDarkTheme';
-export { blueTheme as blue } from './blueTheme';
 export { blueThemes as blueThemes } from './blueMergedTheme';
