@@ -6,8 +6,7 @@ export default{
         styleOverrides: {
             root: ({theme}) => ({
                 backgroundColor: theme.vars.palette.background.paper,
-                    // color: theme.vars.palette.text.hint, // commenting to check if hint is available or not
-                    color: theme.vars.palette.text.primary, // remove if comment above is uncommented
+                    color: theme.vars.palette.text.primary,
                     borderColor: BLUIColors.gray[100],
                     "&:hover": {
                         backgroundColor: Color(BLUIColors.black[500])

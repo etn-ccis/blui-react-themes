@@ -33,12 +33,6 @@ export default {
                     "&.MuiTableRow-hover:hover": {
                         backgroundColor: `rgba(${theme.vars.palette.primary.dark} / 0.2)`,
                         "&.MuiTableRow-hover:hover": {
-                            // backgroundColor: Color(
-                            //     theme.vars.palette.primary.dark
-                            // )
-                            //     .mix(Color(MediumBlackBackground), 0.5)
-                            //     .alpha(0.2)
-                            //     .string(),
                             backgroundColor: `rgba(${theme.vars.palette.primary.dark} / 0.3)`,
                         },
                     },
