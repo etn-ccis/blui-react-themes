@@ -107,7 +107,7 @@ const DarkThemeColors = {
 const Spacing = 8;
 
 export const blueThemes = createTheme({
-    cssVariables: true,
+    cssVariables: {colorSchemeSelector: 'class'},
     direction: "ltr",
     typography: typography,
     spacing: Spacing,

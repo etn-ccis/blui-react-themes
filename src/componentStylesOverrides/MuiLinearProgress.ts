@@ -17,12 +17,12 @@ export default {
         }),
         dashedColorPrimary: ({ theme }) => ({
             ...theme.applyStyles('dark', {
-                backgroundImage: `radial-gradient(${`rgba(${theme.vars.palette.primary.dark} / 0.5)`} 0%, $${`rgba(${theme.vars.palette.primary.dark} / 0.7)`} 16%, transparent 42%)`,
+                backgroundImage: `radial-gradient(${`rgba(${theme.vars.palette.primary.dark} / 0.5)`} 0%, ${`rgba(${theme.vars.palette.primary.dark} / 0.7)`} 16%, transparent 42%)`,
             }),
         }),
         dashedColorSecondary: ({ theme }) => ({
             ...theme.applyStyles('dark', {
-                backgroundImage: `radial-gradient(${`rgba(${theme.vars.palette.secondary.dark} / 0.5)`} 0%, $${`rgba(${theme.vars.palette.secondary.dark} / 0.7)`} 16%, transparent 42%)`,
+                backgroundImage: `radial-gradient(${`rgba(${theme.vars.palette.secondary.dark} / 0.5)`} 0%, ${`rgba(${theme.vars.palette.secondary.dark} / 0.7)`} 16%, transparent 42%)`,
             }),
         }),
         barColorPrimary: ({ theme }) => ({
