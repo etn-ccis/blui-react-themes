@@ -16,10 +16,8 @@ if [ ! -f ./LICENSES.json ]; then echo -e "${RED}Not Found${NC}" && exit 1; else
 echo -ne "  changelog: "
 if [ ! -f ./CHANGELOG.md ]; then echo -e "${RED}Not Found${NC}" && exit 1; else echo -e "${GREEN}Found${NC}"; fi
 
-echo -ne "  blue theme: "
-if [ ! -f ./dist/blueTheme.js ]; then echo -e "${RED}Not Found${NC}" && exit 1; else echo -e "${GREEN}Found${NC}"; fi
-echo -ne "  blue dark theme: "
-if [ ! -f ./dist/blueDarkTheme.js ]; then echo -e "${RED}Not Found${NC}" && exit 1; else echo -e "${GREEN}Found${NC}"; fi
+echo -ne "  blue merged theme: "
+if [ ! -f ./dist/blueMergedTheme.js ]; then echo -e "${RED}Not Found${NC}" && exit 1; else echo -e "${GREEN}Found${NC}"; fi
 echo -ne "  index: "
 if [ ! -f ./dist/index.js ]; then echo -e "${RED}Not Found${NC}" && exit 1; else echo -e "${GREEN}Found${NC}"; fi
 echo -ne "  index type declaration: "
