@@ -1,5 +1,11 @@
 # Changelog
 
+## v8.0.0 ()
+
+### Changed
+
+- Updated MUI version to v6 ([#104](https://github.com/etn-ccis/blui-react-themes/pull/104)).
+
 ## v7.2.0 (October 12, 2023)
 
 ### Updated
