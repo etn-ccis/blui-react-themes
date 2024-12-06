@@ -47,7 +47,7 @@ import { blueThemes } from "@brightlayer-ui/react-themes";
 
 By Default the theme will take system's mode. To set your mode(light/dark), make use of `useColorScheme()` hook to set and use theme modes using helpers `mode` & `setMode` of `useColorScheme()`.
 
-## Example to use useColorScheme() hook
+## Example to set default mode when app loads using useColorScheme() hook
 
 ```tsx
 import { useEffect } from 'react';
