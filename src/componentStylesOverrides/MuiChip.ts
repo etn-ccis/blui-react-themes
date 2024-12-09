@@ -127,13 +127,18 @@ export default {
             backgroundColor: theme.vars.palette.secondary.main,
             color: WhiteText,
             "&:not(.MuiChip-outlinedSecondary).Mui-disabled": {
-                backgroundColor: theme.vars.palette.divider,
-                color: BLUIColors.black[300],
+                backgroundColor: theme.vars.palette.secondary.light,
+                color: BLUIColors.lightBlue[200],
                 opacity: 0.8,
             },
             ...theme.applyStyles("dark", {
                 color: WhiteText,
                 backgroundColor: theme.vars.palette.secondary.dark,
+                "&:not(.MuiChip-outlinedSecondary).Mui-disabled": {
+                    backgroundColor: theme.vars.palette.divider,
+                    color: BLUIColors.black[300],
+                    opacity: 0.8,
+                },
             }),
         }),
         deleteIcon: ({ theme }) => ({
@@ -181,14 +186,14 @@ export default {
             }),
         }),
         iconColorPrimary: ({ theme }) => ({
-            ...theme.applyStyles('light', {
+            ...theme.applyStyles("light", {
                 color: "inherit",
-            })
+            }),
         }),
         iconColorSecondary: ({ theme }) => ({
-            ...theme.applyStyles('light', {
+            ...theme.applyStyles("light", {
                 color: "inherit",
-            })
+            }),
         }),
         outlined: ({ theme }) => ({
             borderColor: Color(BlackBorder).alpha(0.12).string(),
@@ -338,13 +343,13 @@ export default {
             }),
         }),
         icon: ({ theme }) => ({
-            ...theme.applyStyles('light', {
+            ...theme.applyStyles("light", {
                 fontSize: "1.125rem",
                 color: theme.vars.palette.text.primary,
                 marginLeft: Spacing,
                 marginRight: -4,
             }),
-        })
+        }),
     },
 } as Components<
     Omit<Theme, "components" | "palette"> & CssVarsTheme
