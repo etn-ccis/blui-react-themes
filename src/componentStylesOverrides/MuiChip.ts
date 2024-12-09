@@ -116,15 +116,20 @@ export default {
             ...theme.applyStyles("dark", {
                 color: WhiteText,
                 backgroundColor: theme.vars.palette.primary.dark,
+                "&:not(.MuiChip-outlinedPrimary).Mui-disabled": {
+                    backgroundColor: theme.vars.palette.divider,
+                    color: BLUIColors.black[300],
+                    opacity: 0.8,
+                },
             }),
         }),
         colorSecondary: ({ theme }) => ({
             backgroundColor: theme.vars.palette.secondary.main,
             color: WhiteText,
             "&:not(.MuiChip-outlinedSecondary).Mui-disabled": {
-                backgroundColor: theme.vars.palette.secondary.light,
-                color: BLUIColors.lightBlue[200],
-                opacity: 1,
+                backgroundColor: theme.vars.palette.divider,
+                color: BLUIColors.black[300],
+                opacity: 0.8,
             },
             ...theme.applyStyles("dark", {
                 color: WhiteText,
