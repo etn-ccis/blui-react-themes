@@ -24,53 +24,31 @@ or yarn
 yarn add @brightlayer-ui/react-themes
 ```
 
-## Migration from BLUI React theme v7 to v8
-
-This package has been updated to support Material UI version 6. If you are migrating from BLUI React theme 7 to BLUI React theme 8, please follow these steps:
-
--   Update Material UI: Ensure you have updated your Material UI dependencies to version 6.
--   Update Theme Usage: Replace any usage of the old theme options (blue or blueDark) with the new single theme option.
--   Make use of `useColorScheme()` hook to set and use theme modes using helpers `mode` & `setMode` of `useColorScheme()`.
-
 # Usage
 
-To use these themes in your application, simply wrap the app in a `ThemeProvider` and pass in the theme.:
+To use these themes in your application, simply wrap the app in a `ThemeProvider` and pass in the theme:
 
 ```tsx
 import { ThemeProvider } from "@mui/material/styles";
-import { blueThemes } from "@brightlayer-ui/react-themes";
+import { theme } from "@brightlayer-ui/react-themes";
 
-<ThemeProvider theme={blueThemes}>
+<ThemeProvider theme={theme}>
     <App />
 </ThemeProvider>;
 ```
 
-By Default the theme will take system's mode. To set your mode(light/dark), make use of `useColorScheme()` hook to set and use theme modes using helpers `mode` & `setMode` of `useColorScheme()`.
+The theme will default to light/dark mode based on the user's system preference. To manually toggle the theme mode (e.g., from settings), you will need to use the `useColorScheme` hook (see below).
 
-## Example to set default mode when app loads using useColorScheme() hook
+## Changing the default mode
+
+If you do not want to use the system setting as the default, you can set the `defaultMode` on the `ThemeProvider`:
 
 ```tsx
-import { useEffect } from 'react';
-import { useColorScheme } from '@mui/material/styles';
-
-export const App = (): JSX.Element => {
-    const { setMode } = useColorScheme();
-
-    useEffect(() => {
-        setMode('light');
-    }, []);
-
-    return (
-        <>
-            <BrowserRouter basename={'/'}>
-                <AppRouter />
-            </BrowserRouter>
-        </>
-    );
-};
+<ThemeProvider theme={theme} defaultMode={'dark'/* or 'light' */}></ThemeProvider>
 ```
 
-## Example to use Toggle Mode
+## Manually toggling the mode
+You can manually toggle the theme mode using the `useColorScheme` hook:
 
 ```tsx
 import { useColorScheme } from "@mui/material/styles";
@@ -92,4 +70,28 @@ return(
 }
 ```
 
-Read about the usage details at [our developer documentation site](https://brightlayer-ui-components.github.io/react/themes/overview).
+For more information on toggling modes, refer to the [MUI docs](https://mui.com/material-ui/customization/dark-mode/).
+
+For more detailed information about the BLUI themes, refer to our [developer documentation](https://brightlayer-ui-components.github.io/react/themes/overview) site.
+
+
+## Migration from v7 to v8
+
+In version 8, the theme now follows the standard from MUI v6, which combines light and dark theme into a single theme object. In order to use the new version, you will need to:
+
+### Update Material UI
+Ensure you have updated your Material UI dependencies to version 6 (this includes @mui/material, @mui/icons-material, etc.). Refer to the official MUI [migration docs](https://mui.com/material-ui/migration/upgrade-to-v6/) for more details.
+
+### Consolidate themes
+If you were previously switching between `blue` and `blueDark` themes in your `ThemeProvider`, this should be replaced with the single `theme` object.
+
+```diff
+- import { blue, blueDark } from '@brightlayer-ui/react-themes';
++ import { theme } from '@brightlayer-ui/react-themes';
+
+- <ThemeProvider theme={isDark ? blueDark : blue}></ThemeProvider>
++ <ThemeProvider theme={theme}></ThemeProvider>
+```
+
+### Update logic to toggle the theme mode
+Instead of swapping entire theme objects, you will now make use of the `useColorScheme` hook to toggle between light and dark mode. Refer to the usage instructions above or the [MUI docs](https://mui.com/material-ui/customization/css-theme-variables/configuration/#toggling-dark-mode-manually) for more details.
