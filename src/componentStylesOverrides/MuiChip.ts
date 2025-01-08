@@ -27,7 +27,7 @@ export default {
             },
             "&.Mui-disabled": {
                 opacity: 1,
-                color: `rgba(${theme.vars.palette.text.primary} / 0.3)`,
+                color: theme.vars.palette.action.disabled,
                 "& .MuiChip-avatar": {
                     opacity: 0.5,
                 },
@@ -291,11 +291,17 @@ export default {
                     color: "inherit",
                 },
                 "&.MuiChip-outlinedPrimary": {
-                    backgroundColor: `rgba(${theme.vars.palette.primary.dark} / 0.2)`,
-                    border: `1px solid rgba(${theme.vars.palette.primary.dark} / 0.2)`,
+                    backgroundColor: Color(BLUIColors.blue[400])
+                        .alpha(0.2)
+                        .string(),
+                    border: `1px solid ${Color(BLUIColors.blue[400])
+                        .alpha(0.2)
+                        .string()}`,
                     color: theme.vars.palette.primary.main,
                     "&.MuiChip-clickable:hover": {
-                        backgroundColor: `rgba(${theme.vars.palette.primary.dark} / 0.3)`,
+                        backgroundColor: Color(BLUIColors.blue[500])
+                            .alpha(0.4)
+                            .string(),
                     },
                     "& .MuiChip-deleteIconOutlinedColorPrimary": {
                         color: BLUIColors.blue[400],
@@ -316,11 +322,15 @@ export default {
                     },
                 },
                 "&.MuiChip-outlinedSecondary": {
-                    backgroundColor: `rgba(${theme.vars.palette.secondary.main} / 0.2)`,
+                    backgroundColor: Color(BLUIColors.blue[300])
+                        .alpha(0.25)
+                        .string(),
                     border: `1px solid ${theme.vars.palette.secondary.main}`,
                     color: theme.vars.palette.secondary.main,
                     "&.MuiChip-clickable:hover": {
-                        backgroundColor: `rgba(${theme.vars.palette.secondary.dark} / 0.3)`,
+                        backgroundColor: Color(BLUIColors.blue[600])
+                            .alpha(0.4)
+                            .string(),
                     },
                     "& .MuiChip-deleteIconOutlinedColorSecondary": {
                         color: BLUIColors.lightBlue[400],
