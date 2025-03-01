@@ -35,7 +35,7 @@
     "dependencies": {
         "@brightlayer-ui/colors": "^3.1.1",
         "@fontsource/open-sans": "^5.0.3",
-        "color": "^4.2.3"
+        "color": "^5.0.0"
     },
     "peerDependencies": {
         "@mui/material": "^6.0.0"
