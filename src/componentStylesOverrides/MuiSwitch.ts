@@ -10,26 +10,28 @@ export default {
                 opacity: 0.38,
             },
             "&.Mui-checked": {
-                color: theme.vars.palette.secondary.main,
+                color: theme.vars.palette.primary.main,
                 "&.Mui-disabled": {
-                    color: `rgba(${theme.vars.palette.secondary.main} / 0.5)`
+                    color: theme.vars.palette.secondary.main,
+                    opacity: 0.8,
                 },
                 "&.Mui-disabled + .MuiSwitch-track": {
-                    backgroundColor: theme.vars.palette.secondary.main,
+                    opacity: 0.38,
+                    backgroundColor: theme.vars.palette.secondary.main
                 },
             },
             ...theme.applyStyles("dark", {
-                color: theme.vars.palette.text.primary,
+                color: BLUIColors.black[300],
                 "&.Mui-checked + .MuiSwitch-track": {
                     opacity: 0.38,
                 },
                 "&.Mui-checked": {
                     color: theme.vars.palette.secondary.main,
                     "&.Mui-disabled": {
-                        color: `rgba(${theme.vars.palette.secondary.main} / 0.5)`
+                        color: theme.vars.palette.primary.main,
                     },
                     "&.Mui-disabled + .MuiSwitch-track": {
-                        backgroundColor: theme.vars.palette.secondary.main,
+                        backgroundColor: theme.vars.palette.primary.main,
                     },
                 },
             }),
@@ -44,12 +46,9 @@ export default {
                 },
                 "&.Mui-checked": {
                     color: theme.vars.palette.primary.main,
-                    "&.Mui-disabled": {
-                        color: `rgba(${theme.vars.palette.primary.main} / 0.5)`
-                    },
                     "&.Mui-disabled + .MuiSwitch-track": {
                         opacity: 0.38,
-                        backgroundColor: `rgba(${theme.vars.palette.primary.main} / 0.5)`
+                        backgroundColor: theme.vars.palette.primary.main
                     },
                 },
             })
@@ -59,14 +58,16 @@ export default {
                 color: theme.vars.palette.background.paper,
             },
             "&.Mui-disabled + .MuiSwitch-track": {
+                opacity: 0.38,
                 backgroundColor: BLUIColors.black[100],
             },
             ...theme.applyStyles("dark", {
                 "&.Mui-disabled": {
-                    color: Color(BLUIColors.white[50]).string()
+                    color: theme.vars.palette.Switch.defaultDisabledColor,
                 },
                 "&.Mui-disabled + .MuiSwitch-track": {
                     backgroundColor: BLUIColors.black[300],
+                    opacity: 0.38
                 },
             }),
         }),

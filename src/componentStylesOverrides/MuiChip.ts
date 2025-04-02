@@ -290,6 +290,19 @@ export default {
                 "&.Mui-disabled .MuiChip-deleteIcon": {
                     color: "inherit",
                 },
+                "&.Mui-disabled": {
+                        opacity: 1,
+                        borderColor: Color(BLUIColors.black[200])
+                            .alpha(0.36)
+                            .string(),
+                        backgroundColor: "transparent",
+                        color: Color(BLUIColors.black[300])
+                        .alpha(0.36)
+                        .string(),
+                        "& .MuiChip-deleteIconOutlinedColorPrimary": {
+                            color: "inherit",
+                        },
+                },
                 "&.MuiChip-outlinedPrimary": {
                     backgroundColor: Color(BLUIColors.blue[400])
                         .alpha(0.2)
@@ -315,7 +328,9 @@ export default {
                             .alpha(0.36)
                             .string(),
                         backgroundColor: "transparent",
-                        color: BLUIColors.black[400],
+                        color: Color(BLUIColors.black[300])
+                        .alpha(0.36)
+                        .string(),
                         "& .MuiChip-deleteIconOutlinedColorPrimary": {
                             color: "inherit",
                         },
@@ -340,8 +355,10 @@ export default {
                     },
                     "&.Mui-disabled": {
                         opacity: 1,
-                        backgroundColor: theme.vars.palette.background.paper,
-                        color: theme.vars.palette.action.disabled,
+                        backgroundColor: "transparent",
+                        color: Color(BLUIColors.black[300])
+                        .alpha(0.36)
+                        .string(),
                         borderColor: Color(BLUIColors.black[200])
                             .alpha(0.36)
                             .string(),

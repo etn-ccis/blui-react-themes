@@ -127,10 +127,13 @@ export default {
                             .string(),
                     },
                     "&.Mui-disabled": {
-                        borderColor: Color(BLUIColors.black[200])
+                        borderColor: Color(BLUIColors.black[300])
                             .alpha(0.36)
                             .string(),
-                        color: theme.vars.palette.action.disabled,
+                        color: Color(BLUIColors.black[300])
+                        .alpha(0.36)
+                        .string(),
+                         backgroundColor: 'transparent'
                     },
                 })
             }),
@@ -147,6 +150,16 @@ export default {
                     "&:hover": {
                         backgroundColor: `rgba(${theme.vars.palette.primary.dark} / 0.2)`,
                     },
+                    "&.Mui-disabled": {
+                        borderColor: Color(BLUIColors.black[300])
+                            .alpha(0.36)
+                            .string(),
+                        color: Color(BLUIColors.black[300])
+                        .alpha(0.36)
+                        .string(),
+                        backgroundColor: 'transparent'
+                    },
+                    
                 })
             }),
             outlinedSecondary: ({ theme }) => ({
@@ -165,10 +178,13 @@ export default {
                         },
                     },
                     "&.Mui-disabled": {
-                        borderColor: Color(BLUIColors.black[200])
-                            .alpha(0.36)
-                            .string(),
-                        color: theme.vars.palette.action.disabled,
+                        borderColor: Color(BLUIColors.black[300])
+                        .alpha(0.36)
+                        .string(),
+                        color: Color(BLUIColors.black[300])
+                        .alpha(0.36)
+                        .string(),
+                        backgroundColor: 'transparent'
                     },
                 })
             }),
