@@ -2,7 +2,6 @@
 import { Components, Theme, CssVarsTheme } from '@mui/material/styles';
 import * as BLUIColors from "@brightlayer-ui/colors";
 import Color from 'color';
-
 export default {
         styleOverrides: {
             root: ({theme}) => ({
@@ -46,8 +45,7 @@ export default {
                     backgroundColor: theme.vars.palette.background.paper,
                     border: `1px solid ${Color(BLUIColors.black[500])
                         .alpha(0.12)
-                        .string()}`,
-                    color: `rgba(${theme.vars.palette.text.primary} / 0.3)`
+                        .string()}`
                 },
                 ...theme.applyStyles('dark', {
                     backgroundColor: BLUIColors.black[500],
@@ -71,7 +69,6 @@ export default {
                     backgroundColor: theme.vars.palette.primary.light,
                     borderWidth: 0,
                     color: BLUIColors.blue[200],
-                    opacity: 1,
                 },
                 ...theme.applyStyles('dark', {
                     backgroundColor: theme.vars.palette.primary.dark,
@@ -81,6 +78,8 @@ export default {
                     },
                     "&.Mui-disabled": {
                         borderWidth: 0,
+                        backgroundColor: theme.vars.palette.action.disabledBackground,
+                        color: BLUIColors.black[400],
                     },
                 })
             }),
@@ -91,10 +90,9 @@ export default {
                     backgroundColor: BLUIColors.lightBlue[300],
                 },
                 "&.Mui-disabled": {
-                    backgroundColor: theme.vars.palette.secondary.light,
+                    backgroundColor: theme.vars.palette.primary.light,
                     borderWidth: 0,
-                    color: BLUIColors.lightBlue[200],
-                    opacity: 1,
+                    color: BLUIColors.blue[200],
                 },
                 ...theme.applyStyles('dark', {
                     backgroundColor: theme.vars.palette.secondary.dark,
@@ -103,7 +101,8 @@ export default {
                         backgroundColor: BLUIColors.lightBlue[300],
                     },
                     "&.Mui-disabled": {
-                        borderWidth: 0,
+                        backgroundColor: theme.vars.palette.action.disabledBackground,
+                        color: BLUIColors.black[400],
                     },
                 })
             }),
@@ -116,8 +115,7 @@ export default {
                 },
                 "&.Mui-disabled": {
                     backgroundColor: theme.vars.palette.background.paper,
-                    borderColor: Color(BLUIColors.black[500]).alpha(0.12).string(),
-                    color: `rgba(${theme.vars.palette.text.primary} / 0.3)`
+                    borderColor: Color(BLUIColors.black[500]).alpha(0.12).string()
                 },
                 ...theme.applyStyles('dark', {
                     borderColor: BLUIColors.black[200],
