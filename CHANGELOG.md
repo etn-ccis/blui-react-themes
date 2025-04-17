@@ -1,4 +1,13 @@
 # Changelog
+## v6.1.1 (March 18, 2025)
+
+### Fixed
+
+-   MUI Chip background color and disabled text color (dark mode) not getting applied ([#122](https://github.com/etn-ccis/blui-react-themes/issues/122)).
+-   Contained button dark theme color wrong ([#129](https://github.com/etn-ccis/blui-react-themes/issues/129)).
+-   Disabled button wrong color ([#130](https://github.com/etn-ccis/blui-react-themes/issues/130)).
+-   Outlined default disabled chips look wrong ([#134](https://github.com/etn-ccis/blui-react-themes/issues/134)).
+-   Outlined disabled dark theme button wrong color ([#135](https://github.com/etn-ccis/blui-react-themes/issues/135)).
 
 ## v8.0.0 (December 16, 2024)
 
