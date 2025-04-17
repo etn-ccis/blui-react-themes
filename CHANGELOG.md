@@ -1,5 +1,5 @@
 # Changelog
-## v6.1.1 (March 18, 2025)
+## v8.1.0 (March 18, 2025)
 
 ### Fixed
 
