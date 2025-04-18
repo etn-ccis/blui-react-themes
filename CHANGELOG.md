@@ -1,4 +1,13 @@
 # Changelog
+## v8.1.0 (April 21, 2025)
+
+### Fixed
+
+-   The text color of disabled Chips should align with the theme settings.Primary and secondary Chips should have background colors that match the dark mode theme settings ([#122](https://github.com/etn-ccis/blui-react-themes/issues/122)).
+-   Contained buttons in the dark theme are displaying incorrect colors. This include the text color not matching the specified dark theme palette ([#129](https://github.com/etn-ccis/blui-react-themes/issues/129)).
+-   Disabled buttons are showing incorrect colors.This includes both background and text colors ([#130](https://github.com/etn-ccis/blui-react-themes/issues/130)).
+-   Outlined Chips in their default disabled state appear with incorrect styling, which  include background color or text color issues ([#134](https://github.com/etn-ccis/blui-react-themes/issues/134)).
+-   Outlined buttons in the dark theme display incorrect background color when disabled. This affects the visual consistency and usability of the buttons ([#135](https://github.com/etn-ccis/blui-react-themes/issues/135)).
 
 ## v8.0.0 (December 16, 2024)
 
