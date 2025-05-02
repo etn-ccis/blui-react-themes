@@ -291,15 +291,17 @@ export default {
                     color: "inherit",
                 },
                 "&.Mui-disabled": {
-                    opacity: 1,
-                    borderColor: Color(BLUIColors.black[200])
+                        opacity: 1,
+                        borderColor: Color(BLUIColors.black[200])
+                            .alpha(0.36)
+                            .string(),
+                        backgroundColor: "transparent",
+                        color: Color(BLUIColors.black[300])
                         .alpha(0.36)
                         .string(),
-                    backgroundColor: "transparent",
-                    color: Color(BLUIColors.black[300]).alpha(0.36).string(),
-                    "& .MuiChip-deleteIconOutlinedColorPrimary": {
-                        color: "inherit",
-                    },
+                        "& .MuiChip-deleteIconOutlinedColorPrimary": {
+                            color: "inherit",
+                        },
                 },
                 "&.MuiChip-outlinedPrimary": {
                     backgroundColor: Color(BLUIColors.blue[400])
@@ -327,8 +329,8 @@ export default {
                             .string(),
                         backgroundColor: "transparent",
                         color: Color(BLUIColors.black[300])
-                            .alpha(0.36)
-                            .string(),
+                        .alpha(0.36)
+                        .string(),
                         "& .MuiChip-deleteIconOutlinedColorPrimary": {
                             color: "inherit",
                         },
@@ -355,8 +357,8 @@ export default {
                         opacity: 1,
                         backgroundColor: "transparent",
                         color: Color(BLUIColors.black[300])
-                            .alpha(0.36)
-                            .string(),
+                        .alpha(0.36)
+                        .string(),
                         borderColor: Color(BLUIColors.black[200])
                             .alpha(0.36)
                             .string(),
@@ -368,11 +370,11 @@ export default {
             }),
         }),
         icon: ({ theme }) => ({
-            fontSize: "1.125rem",
-            marginLeft: Spacing,
-            marginRight: -4,
             ...theme.applyStyles("light", {
+                fontSize: "1.125rem",
                 color: theme.vars.palette.text.primary,
+                marginLeft: Spacing,
+                marginRight: -4,
             }),
         }),
     },
