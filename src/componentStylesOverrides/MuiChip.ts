@@ -1,6 +1,7 @@
 import { Components, Theme, CssVarsTheme } from "@mui/material/styles";
 import * as BLUIColors from "@brightlayer-ui/colors";
 import Color from "color";
+import { theme } from "..";
 
 const WhiteText = BLUIColors.white[50];
 const Spacing = 8;
@@ -307,9 +308,8 @@ export default {
                     backgroundColor: Color(BLUIColors.blue[400])
                         .alpha(0.2)
                         .string(),
-                    border: `1px solid ${Color(BLUIColors.blue[400])
-                        .alpha(0.2)
-                        .string()}`,
+                    border: `1px solid ${theme.vars.palette.primary.main}`,
+                     
                     color: theme.vars.palette.primary.main,
                     "&.MuiChip-clickable:hover": {
                         backgroundColor: Color(BLUIColors.blue[500])
