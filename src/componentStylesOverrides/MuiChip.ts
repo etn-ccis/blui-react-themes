@@ -376,6 +376,12 @@ export default {
                 marginLeft: Spacing,
                 marginRight: -4,
             }),
+            ...theme.applyStyles("dark", {
+                fontSize: "1.125rem",
+                color: theme.vars.palette.text.primary,
+                marginLeft: Spacing,
+                marginRight: -4,
+            }),
         }),
     },
 } as Components<
