@@ -14,6 +14,7 @@ export default {
             },
             ...theme.applyStyles("dark", {
                 color: BLUIColors.black[500],
+                backgroundColor: BLUIColors.black[50],
                 "& .MuiButton-textPrimary": {
                     color: theme.vars.palette.primary.dark,
                 },
