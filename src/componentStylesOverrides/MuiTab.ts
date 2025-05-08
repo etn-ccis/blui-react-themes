@@ -6,6 +6,7 @@ const WhiteText = BLUIColors.white[50];
 export default {
     styleOverrides: {
         root: ({ theme }) => ({
+            textTransform: "initial",
             fontWeight: 400,
             "&.Mui-selected": {
                 fontWeight: 600,
@@ -18,24 +19,24 @@ export default {
             }),
         }),
         textColorPrimary: ({ theme }) => ({
-            ...theme.applyStyles('light', {
+            ...theme.applyStyles("light", {
                 color: WhiteText,
                 opacity: 0.7,
                 "&.Mui-selected": {
                     color: WhiteText,
                     opacity: 1,
                 },
-            })
+            }),
         }),
         textColorSecondary: ({ theme }) => ({
-            ...theme.applyStyles('light', {
+            ...theme.applyStyles("light", {
                 color: WhiteText,
                 opacity: 0.7,
                 "&.Mui-selected": {
                     color: WhiteText,
                     opacity: 1,
                 },
-            })
+            }),
         }),
         textColorInherit: ({ theme }) => ({
             ...theme.applyStyles("dark", {
