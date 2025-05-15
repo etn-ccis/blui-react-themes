@@ -107,6 +107,33 @@ export default {
                 })
             }),
             outlined: ({ theme }) => ({
+                "&:hover": {
+                    backgroundColor: Color(BLUIColors.black[500])
+                        .alpha(0.05)
+                        .string(),
+                },
+                "&.Mui-disabled": {
+                    backgroundColor: theme.vars.palette.background.paper,
+                    borderColor: Color(BLUIColors.black[500]).alpha(0.12).string()
+                },
+                ...theme.applyStyles('dark', {
+                    "&:hover": {
+                        backgroundColor: Color(BLUIColors.black[50])
+                            .alpha(0.1)
+                            .string(),
+                    },
+                    "&.Mui-disabled": {
+                        borderColor: Color(BLUIColors.black[300])
+                            .alpha(0.36)
+                            .string(),
+                        color: Color(BLUIColors.black[300])
+                        .alpha(0.36)
+                        .string(),
+                         backgroundColor: 'transparent'
+                    },
+                })
+            }),
+            outlinedInherit: ({ theme }) => ({
                 borderColor: theme.vars.palette.divider,
                 "&:hover": {
                     backgroundColor: Color(BLUIColors.black[500])
