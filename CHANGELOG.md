@@ -12,7 +12,7 @@
 - Dark theme outlined primary chips are missing borders. ([#128](https://github.com/etn-ccis/blui-react-themes/issues/128)).
 - Outlined buttons have grey border. ([#111](https://github.com/etn-ccis/blui-react-themes/issues/111)).
 - Remove uppercase from default Material UI tab styles. ([#67](https://github.com/etn-ccis/blui-react-themes/issues/67)).
-- Dark Theme Material UI Chips Leading Icon Size Wrong. ([#67](https://github.com/etn-ccis/blui-react-themes/issues/66)).
+- Dark Theme Material UI Chips Leading Icon Size Wrong. ([#66](https://github.com/etn-ccis/blui-react-themes/issues/66)).
 - Button style override for outlined not inheriting color. ([#50](https://github.com/etn-ccis/blui-react-themes/issues/50)).
 
 ## v8.1.0 (April 21, 2025)
