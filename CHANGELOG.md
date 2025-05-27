@@ -4,7 +4,7 @@
 
 ### Fixed
 
-- Bottom navigation bar dark theme, wrong color. ([#137](https://github.com/etn-ccis/blui-react-themes/issues/137)),
+- Bottom navigation bar dark theme, wrong color. ([#137](https://github.com/etn-ccis/blui-react-themes/issues/137)).
 - Desktop stepper dark theme wrong color. ([#133](https://github.com/etn-ccis/blui-react-themes/issues/133)).
 - Disabled checked toggle switch. ([#132](https://github.com/etn-ccis/blui-react-themes/issues/132)).
 - Disabled slider wrong color. ([#131](https://github.com/etn-ccis/blui-react-themes/issues/131)).
