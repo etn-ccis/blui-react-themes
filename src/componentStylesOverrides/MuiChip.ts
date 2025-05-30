@@ -1,7 +1,6 @@
 import { Components, Theme, CssVarsTheme } from "@mui/material/styles";
 import * as BLUIColors from "@brightlayer-ui/colors";
 import Color from "color";
-import { theme } from "..";
 
 const WhiteText = BLUIColors.white[50];
 const Spacing = 8;
