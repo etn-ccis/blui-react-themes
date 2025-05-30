@@ -22,7 +22,7 @@ export default {
                 },
                 "&:not(.Mui-selected)": {
                     color: BLUIColors.black[200],
-                    ".MuiBottomNavigationAction-label": {
+                    "& .MuiBottomNavigationAction-label": {
                         color: BLUIColors.black[50],
                     },
                 },
