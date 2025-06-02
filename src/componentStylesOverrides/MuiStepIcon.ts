@@ -1,5 +1,6 @@
 import { BLUIColors } from "@brightlayer-ui/colors";
 import { Components, Theme, CssVarsTheme } from "@mui/material/styles";
+import Color from "color";
 
 const WhiteText = BLUIColors.white[50];
 
@@ -16,6 +17,7 @@ export default {
                 },
             },
             ...theme.applyStyles("dark", {
+                color: Color(BLUIColors.black[300]).alpha(0.36).string(),
                 zIndex: 1,
                 "&.Mui-active": {
                     color: theme.vars.palette.primary.dark,

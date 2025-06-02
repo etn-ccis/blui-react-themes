@@ -10,7 +10,17 @@ export default {
             ...theme.applyStyles("dark", {
                 height: 6,
                 color: BLUIColors.blue[300],
-            }),
+            }),           
+                "&.Mui-disabled": {
+                    color: theme.vars.palette.primary.main,
+                    opacity: 0.5,
+                },
+                  "&.Mui-disabled .MuiSlider-track": {
+                    opacity: 0.38,
+                    backgroundColor: theme.vars.palette.primary.main
+                },
+                
+            
         }),
         colorSecondary: ({ theme }) => ({
             color: theme.vars.palette.secondary.main,
@@ -20,8 +30,10 @@ export default {
         }),
         track: ({ theme }) => ({
             height: 6,
-            ...theme.applyStyles("dark", {
-                height: 6,
+           backgroundColor: theme.vars.palette.primary.main,      
+         ...theme.applyStyles("dark", {
+                 height: 6,
+                 
             }),
         }),
         rail: ({ theme }) => ({
@@ -37,6 +49,9 @@ export default {
             ...theme.applyStyles("dark", {
                 backgroundColor: theme.vars.palette.primary.main,
             }),
+             "&.Mui-disabled": {
+               backgroundColor: theme.vars.palette.primary.main,
+         },
         }),
         thumbColorSecondary: ({ theme }) => ({
             backgroundColor: theme.vars.palette.secondary.main,

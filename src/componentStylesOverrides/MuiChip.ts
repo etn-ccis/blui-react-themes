@@ -307,9 +307,8 @@ export default {
                     backgroundColor: Color(BLUIColors.blue[400])
                         .alpha(0.2)
                         .string(),
-                    border: `1px solid ${Color(BLUIColors.blue[400])
-                        .alpha(0.2)
-                        .string()}`,
+                    border: `1px solid ${theme.vars.palette.primary.main}`,
+                     
                     color: theme.vars.palette.primary.main,
                     "&.MuiChip-clickable:hover": {
                         backgroundColor: Color(BLUIColors.blue[500])
@@ -371,6 +370,12 @@ export default {
         }),
         icon: ({ theme }) => ({
             ...theme.applyStyles("light", {
+                fontSize: "1.125rem",
+                color: theme.vars.palette.text.primary,
+                marginLeft: Spacing,
+                marginRight: -4,
+            }),
+            ...theme.applyStyles("dark", {
                 fontSize: "1.125rem",
                 color: theme.vars.palette.text.primary,
                 marginLeft: Spacing,
