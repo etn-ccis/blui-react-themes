@@ -3,6 +3,11 @@
 [![Build](https://github.com/etn-ccis/blui-react-themes/actions/workflows/blui-ci.yml/badge.svg?branch=master)](https://github.com/etn-ccis/blui-react-themes/actions/workflows/blui-ci.yml)
 [![](https://img.shields.io/npm/v/@brightlayer-ui/react-themes.svg?label=@brightlayer-ui/react-themes&style=flat)](https://www.npmjs.com/package/@brightlayer-ui/react-themes)
 
+>**Important Migration Notice:**
+>
+>This repository has been migrated to a monorepo to consolidate All the React libraries developed by Brightlayer Team into a single workspace. Future development and updates will now occur in the following location: [https://github.com/etn-ccis/blui-react/tree/dev/packages/themes]. Please update your bookmarks and contribute to the monorepo for the latest changes.
+
+
 This package provides theming support for Eaton applications using the Brightlayer UI design system. It includes resources for developers using React w/ [Material UI](https://www.npmjs.com/package/@mui/material) version 6+ (prior versions of this package will work with Material UI version 5 - check the [Changelog](https://github.com/etn-ccis/blui-themes/blob/master/CHANGELOG.md) for details). This package now comes with a single theme option that supports both light mode and dark mode.
 
 For other frameworks, check out our related packages:
